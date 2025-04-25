@@ -277,85 +277,35 @@
                 loading.classList.add('hidden');
             }).catch(error => {
                 console.error('Error loading data:', error);
-                alert('Erro ao carregar os dados. Por favor, tente novamente mais tarde.');
+                alert('Erro ao carregar os dados. Por favor, verifique se os arquivos CSV estão disponíveis e acessíveis.');
                 loading.classList.add('hidden');
             });
             
             // Load CSV function
             function loadCSV(filename) {
                 return new Promise((resolve, reject) => {
-                    // Check if we're using local files or if we're in development mode
-                    // For demo purposes, we'll use hardcoded data
-                    if (filename === 'jogos.csv') {
-                        const csvData = `data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
-29/03/2025,21:30,1,São Paulo,Recife,FINISHED,0.0,0.0
-29/03/2025,21:30,1,Cruzeiro,Mirassol,FINISHED,2.0,1.0
-29/03/2025,21:30,1,Grêmio,Mineiro,FINISHED,2.0,1.0
-29/03/2025,21:30,1,Fortaleza,Fluminense,FINISHED,2.0,0.0
-29/03/2025,21:30,1,Juventude,Vitória,FINISHED,2.0,0.0
-30/03/2025,00:00,1,Flamengo,Internacional,FINISHED,1.0,1.0
-30/03/2025,19:00,1,Palmeiras,Botafogo,FINISHED,0.0,0.0
-30/03/2025,21:30,1,Vasco da Gama,Santos,FINISHED,2.0,1.0
-30/03/2025,23:00,1,Bahia,Corinthians,FINISHED,1.0,1.0
-31/03/2025,23:00,1,Bragantino,Ceará,FINISHED,2.0,2.0
-05/04/2025,21:30,2,Corinthians,Vasco da Gama,FINISHED,3.0,0.0
-05/04/2025,21:30,2,Ceará,Grêmio,FINISHED,2.0,0.0
-06/04/2025,00:00,2,Botafogo,Juventude,FINISHED,2.0,0.0
-06/04/2025,19:00,2,Fluminense,Bragantino,FINISHED,2.0,1.0
-06/04/2025,19:00,2,Mineiro,São Paulo,FINISHED,0.0,0.0
-06/04/2025,21:30,2,Mirassol,Fortaleza,FINISHED,1.0,1.0`;
-                        
-                        Papa.parse(csvData, {
-                            header: true,
-                            dynamicTyping: true,
-                            complete: (results) => {
-                                resolve(results.data);
-                            },
-                            error: (error) => {
-                                reject(error);
+                    Papa.parse(filename, {
+                        download: true,
+                        header: true,
+                        dynamicTyping: true,
+                        complete: (results) => {
+                            if (results.errors && results.errors.length > 0) {
+                                console.warn('Avisos ao carregar CSV:', results.errors);
                             }
-                        });
-                    } else if (filename === 'classificacao.csv') {
-                        const csvData = `Pos,Equipe,P,J,V,E,D,GP,GC,SG,%
-1,Palmeiras,13,5,4,1,0,7,2,5,86.7
-2,Flamengo,11,5,3,2,0,11,2,9,73.3
-3,Bragantino,10,5,3,1,1,6,4,2,66.7
-4,Fluminense,10,5,3,1,1,6,4,2,66.7
-5,Ceará,7,5,2,1,2,7,6,1,46.7
-6,Corinthians,7,5,2,1,2,6,6,0,46.7
-7,Cruzeiro,7,5,2,1,2,6,6,0,46.7
-8,Vasco da Gama,7,5,2,1,2,6,7,-1,46.7
-9,Juventude,7,5,2,1,2,6,11,-5,46.7
-10,São Paulo,7,5,1,4,0,5,4,1,46.7
-11,Mirassol,6,5,1,3,1,9,7,2,40.0
-12,Internacional,6,5,1,3,1,5,3,2,40.0
-13,Bahia,6,5,1,3,1,5,7,-2,40.0
-14,Fortaleza,5,5,1,2,2,5,5,0,33.3
-15,Botafogo,5,5,1,2,2,4,4,0,33.3
-16,Vitória,5,5,1,2,2,6,8,-2,33.3
-17,Mineiro,5,5,1,2,2,4,6,-2,33.3
-18,Santos,4,5,1,1,3,6,7,-1,26.7
-19,Grêmio,4,5,1,1,3,4,10,-6,26.7
-20,Recife,1,5,0,1,4,3,8,-5,6.7`;
-                        
-                        Papa.parse(csvData, {
-                            header: true,
-                            dynamicTyping: true,
-                            complete: (results) => {
-                                resolve(results.data);
-                            },
-                            error: (error) => {
-                                reject(error);
-                            }
-                        });
-                    } else {
-                        reject(new Error('Arquivo desconhecido: ' + filename));
-                    }
+                            resolve(results.data);
+                        },
+                        error: (error) => {
+                            reject(error);
+                        }
+                    });
                 });
             }
             
             // Process matches data
             function processMatchesData() {
+                // Filter out empty or incomplete rows
+                matchesData = matchesData.filter(match => match.rodada && match.time_casa && match.time_visitante);
+                
                 // Extract rounds
                 matchesData.forEach(match => {
                     if (match.rodada) {
@@ -378,6 +328,9 @@
             
             // Process standings data
             function processStandingsData() {
+                // Filter out empty or incomplete rows
+                standingsData = standingsData.filter(team => team.Pos && team.Equipe);
+                
                 // Sort standings by position
                 standingsData.sort((a, b) => a.Pos - b.Pos);
                 
@@ -492,6 +445,8 @@
             
             // Helper function to parse date
             function parseDate(dateStr, timeStr) {
+                if (!dateStr || !timeStr) return new Date(0);
+                
                 const [day, month, year] = dateStr.split('/');
                 const [hours, minutes] = timeStr.split(':');
                 return new Date(`${year}-${month}-${day}T${hours}:${minutes}:00`);
