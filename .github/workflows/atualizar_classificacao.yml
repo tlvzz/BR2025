@@ -25,3 +25,11 @@ jobs:
 
       - name: Executar script de classificação
         run: python codigo/classificacao.py
+      
+      - name: Commit e push dos dados atualizados
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add dados/*.csv
+          git commit -m "Atualiza classificação diária" || echo "Nenhuma mudança para commitar"
+          git push
