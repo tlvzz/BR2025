@@ -1,4 +1,4 @@
-name: Atualizar Tabela Brasileirao
+name: Atualizar Resultados
 
 on:
   schedule:
