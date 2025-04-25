@@ -5,7 +5,7 @@ import os
 os.makedirs("dados", exist_ok=True)
 
 # Carrega a tabela de jogos
-df = pd.read_csv("../dados/jogos_brasileiro_2025.csv")
+df = pd.read_csv("dados/jogos_brasileiro_2025.csv")
 
 # Filtra apenas os jogos finalizados
 df_finalizados = df[df["status"] == "FINISHED"].copy()
@@ -52,6 +52,6 @@ tabela.insert(0, "Pos", range(1, len(tabela) + 1))
 tabela = tabela[["Pos", "Equipe", "P", "J", "V", "E", "D", "GP", "GC", "SG", "%"]]
 
 # Salva a tabela de classificação
-tabela.to_csv("../dados/classificacao_brasileirao_2025.csv", index=False)
+tabela.to_csv("dados/classificacao_brasileirao_2025.csv", index=False)
 
 print("✅ Tabela de classificação criada com sucesso: classificacao_brasileirao_2025.csv")
