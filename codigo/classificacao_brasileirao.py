@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Carrega a tabela de jogos
-df = pd.read_csv("'../dados/jogos_brasileiro_2025.csv")
+df = pd.read_csv("../dados/jogos_brasileiro_2025.csv")
 
 # Filtra apenas os jogos finalizados
 df_finalizados = df[df["status"] == "FINISHED"].copy()
