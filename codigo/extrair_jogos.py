@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # Cria a pasta 'dados' se ela não existir
-os.makedirs("../dados", exist_ok=True)
+os.makedirs("dados", exist_ok=True)
 
 # Chave da API via variáveis de ambiente (GitHub Secret)
 API_KEY = os.environ.get("FOOTBALL_API_KEY", "SUA_CHAVE_API_AQUI")
@@ -48,7 +48,7 @@ def obter_jogos_brasileiro_2025():
 
         df = pd.DataFrame(dados_jogos)
         df = df.sort_values(by=["rodada", "data", "hora"])
-        df.to_csv("../dados/jogos_brasileiro_2025.csv", index=False)
+        df.to_csv("dados/jogos_brasileiro_2025.csv", index=False)
 
         print(f"Total de jogos extraídos: {len(df)}")
         return df
