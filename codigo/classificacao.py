@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 # Cria a pasta 'dados' se ela não existir
 os.makedirs("dados", exist_ok=True)
