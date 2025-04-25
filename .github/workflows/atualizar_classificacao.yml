@@ -24,4 +24,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Executar script de classificação
-        run: python dados/classificacao.py
+        run: python codigo/classificacao.py
