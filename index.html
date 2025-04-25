@@ -209,6 +209,10 @@
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
             
+            // GitHub raw URLs - SUBSTITUA ESTAS URLS COM SEUS LINKS DO GITHUB
+            const JOGOS_CSV_URL = 'https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/jogos.csv';
+            const CLASSIFICACAO_CSV_URL = 'https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/classificacao.csv';
+            
             // Set current date for last update
             lastUpdate.textContent = new Date().toLocaleDateString('pt-BR', {
                 day: '2-digit',
@@ -263,8 +267,8 @@
             
             // Load CSV data
             Promise.all([
-                loadCSV('jogos.csv'),
-                loadCSV('classificacao.csv')
+                loadCSV(JOGOS_CSV_URL),
+                loadCSV(CLASSIFICACAO_CSV_URL)
             ]).then(([matches, standings]) => {
                 matchesData = matches;
                 standingsData = standings;
@@ -281,10 +285,16 @@
                 loading.classList.add('hidden');
             });
             
-            // Load CSV function
-            function loadCSV(filename) {
+            // Load CSV function with CORS proxy option
+            function loadCSV(url) {
                 return new Promise((resolve, reject) => {
-                    Papa.parse(filename, {
+                    // Adiciona CORS proxy se necessário
+                    const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
+                    const finalUrl = url.startsWith('http') ? url : url;
+                    
+                    console.log(`Attempting to load: ${finalUrl}`);
+                    
+                    Papa.parse(finalUrl, {
                         download: true,
                         header: true,
                         dynamicTyping: true,
@@ -295,7 +305,23 @@
                             resolve(results.data);
                         },
                         error: (error) => {
-                            reject(error);
+                            console.error(`Failed to load ${finalUrl}. Trying with CORS proxy...`);
+                            // Se falhar, tenta com proxy CORS
+                            Papa.parse(corsProxyUrl + url, {
+                                download: true,
+                                header: true,
+                                dynamicTyping: true,
+                                complete: (results) => {
+                                    if (results.errors && results.errors.length > 0) {
+                                        console.warn('Avisos ao carregar CSV com proxy:', results.errors);
+                                    }
+                                    resolve(results.data);
+                                },
+                                error: (proxyError) => {
+                                    console.error('Both direct and proxy attempts failed.', proxyError);
+                                    reject(proxyError);
+                                }
+                            });
                         }
                     });
                 });
@@ -400,7 +426,7 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${match.hora}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${match.rodada}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${match.time_casa} x ${match.time_visitante}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">${match.gols_casa} x ${match.gols_visitante}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">${match.gols_casa ?? '-'} x ${match.gols_visitante ?? '-'}</td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${match.status === 'FINISHED' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
                                     ${match.status === 'FINISHED' ? 'Finalizado' : 'Agendado'}
@@ -429,7 +455,7 @@
                                         <div class="font-medium">${match.time_casa}</div>
                                     </div>
                                     <div class="mx-4 text-center font-bold">
-                                        <div class="text-2xl">${match.gols_casa} x ${match.gols_visitante}</div>
+                                        <div class="text-2xl">${match.gols_casa ?? '-'} x ${match.gols_visitante ?? '-'}</div>
                                     </div>
                                     <div class="flex-1 text-left">
                                         <div class="font-medium">${match.time_visitante}</div>
