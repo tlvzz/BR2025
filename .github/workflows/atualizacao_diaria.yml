@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Executar script
-        run: python ../dados/extrair_jogos.py
+        run: python /codigo/extrair_jogos.py
         env:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
 
@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add jogos_brasileiro_2025.csv
+          git add dados/jogos_brasileiro_2025.csv
           git commit -m "Atualização diária automática" || echo "Sem alterações"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
