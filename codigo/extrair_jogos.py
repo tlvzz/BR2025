@@ -45,7 +45,7 @@ def obter_jogos_brasileiro_2025():
 
         df = pd.DataFrame(dados_jogos)
         df = df.sort_values(by=["rodada", "data", "hora"])
-        df.to_csv("jogos_brasileiro_2025.csv", index=False)
+        df.to_csv("../dados/jogos_brasileiro_2025.csv", index=False)
 
         print(f"Total de jogos extraídos: {len(df)}")
         return df
