@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileirão 2025 - Resultados e Classificação</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #009c3b;
+            --secondary-color: #ffdf00;
+        }
+        
+        .bg-brasileirao {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .match-card {
+            transition: all 0.3s ease;
+        }
+        
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .loader {
+            border-top-color: #3498db;
+            animation: spinner 1.5s linear infinite;
+        }
+        
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .position-1 {
+            background-color: rgba(0, 128, 0, 0.1);
+        }
+        
+        .position-2, .position-3, .position-4 {
+            background-color: rgba(0, 0, 255, 0.1);
+        }
+        
+        .position-17, .position-18, .position-19, .position-20 {
+            background-color: rgba(255, 0, 0, 0.1);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-brasileirao shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h1 class="text-3xl font-bold text-white mb-4 md:mb-0">Brasileirão 2025</h1>
+                <div class="flex space-x-2">
+                    <button data-tab="tab-table" class="tab-btn bg-white text-green-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
+                        <i class="fas fa-table mr-2"></i>Classificação
+                    </button>
+                    <button data-tab="tab-matches" class="tab-btn bg-transparent text-white border border-white px-4 py-2 rounded-lg font-medium hover:bg-white hover:bg-opacity-20 transition">
+                        <i class="fas fa-futbol mr-2"></i>Jogos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="fixed inset-0 flex items-center justify-center bg-white bg-opacity-75 z-50">
+        <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-24 w-24"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Tab Content -->
+        <div class="tab-content active" id="tab-table">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-4 bg-gray-50 border-b">
+                    <h2 class="text-xl font-semibold text-gray-800">Classificação</h2>
+                </div>
+                <div class="table-responsive">
+                    <table id="standings-table" class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pos</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Equipe</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">P</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">J</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">V</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">E</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">D</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">GP</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">GC</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">SG</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">%</th>
+                            </tr>
+                        </thead>
+                        <tbody id="standings-body" class="bg-white divide-y divide-gray-200">
+                            <!-- Standings data will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matches Tab -->
+        <div class="tab-content" id="tab-matches">
+            <!-- Filter Section -->
+            <div class="mb-8 bg-white rounded-lg shadow-md p-4">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-full md:w-auto mb-4 md:mb-0">
+                        <h2 class="text-xl font-semibold text-gray-800">Filtrar Jogos</h2>
+                    </div>
+                    <div class="flex flex-wrap items-center space-x-4">
+                        <div class="flex items-center">
+                            <label for="round-filter" class="mr-2 text-gray-700">Rodada:</label>
+                            <select id="round-filter" class="form-select rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50">
+                                <option value="all">Todas</option>
+                                <!-- Round options will be dynamically added -->
+                            </select>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button id="table-view-btn" class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition">
+                                <i class="fas fa-list mr-2"></i>Tabela
+                            </button>
+                            <button id="card-view-btn" class="bg-transparent text-green-600 border border-green-600 px-4 py-2 rounded-lg font-medium hover:bg-green-50 transition">
+                                <i class="fas fa-th-large mr-2"></i>Cards
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matches Content -->
+            <div id="matches-table-view" class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="table-responsive">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hora</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rodada</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Partida</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Resultado</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="matches-table-body" class="bg-white divide-y divide-gray-200">
+                            <!-- Matches will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="matches-card-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+                <!-- Match cards will be inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Brasileirão 2025</h3>
+                    <p class="text-gray-400">Dados atualizados automaticamente</p>
+                </div>
+                <div>
+                    <p>© 2025 - Todos os direitos reservados</p>
+                    <p class="text-gray-400">Última atualização: <span id="last-update"></span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize variables
+            let matchesData = [];
+            let standingsData = [];
+            let rounds = new Set();
+            
+            // Elements
+            const loading = document.getElementById('loading');
+            const lastUpdate = document.getElementById('last-update');
+            const roundFilter = document.getElementById('round-filter');
+            const tableViewBtn = document.getElementById('table-view-btn');
+            const cardViewBtn = document.getElementById('card-view-btn');
+            const matchesTableView = document.getElementById('matches-table-view');
+            const matchesCardView = document.getElementById('matches-card-view');
+            const matchesTableBody = document.getElementById('matches-table-body');
+            const standingsBody = document.getElementById('standings-body');
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            // Set current date for last update
+            lastUpdate.textContent = new Date().toLocaleDateString('pt-BR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            // Tab functionality
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+                    
+                    // Update active button
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('bg-white', 'text-green-700');
+                        btn.classList.add('bg-transparent', 'text-white', 'border', 'border-white');
+                    });
+                    button.classList.remove('bg-transparent', 'text-white', 'border', 'border-white');
+                    button.classList.add('bg-white', 'text-green-700');
+                    
+                    // Update active tab
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Toggle between table and card view
+            tableViewBtn.addEventListener('click', () => {
+                matchesTableView.classList.remove('hidden');
+                matchesCardView.classList.add('hidden');
+                tableViewBtn.classList.remove('bg-transparent', 'text-green-600', 'border', 'border-green-600');
+                tableViewBtn.classList.add('bg-green-600', 'text-white');
+                cardViewBtn.classList.remove('bg-green-600', 'text-white');
+                cardViewBtn.classList.add('bg-transparent', 'text-green-600', 'border', 'border-green-600');
+            });
+            
+            cardViewBtn.addEventListener('click', () => {
+                matchesTableView.classList.add('hidden');
+                matchesCardView.classList.remove('hidden');
+                cardViewBtn.classList.remove('bg-transparent', 'text-green-600', 'border', 'border-green-600');
+                cardViewBtn.classList.add('bg-green-600', 'text-white');
+                tableViewBtn.classList.remove('bg-green-600', 'text-white');
+                tableViewBtn.classList.add('bg-transparent', 'text-green-600', 'border', 'border-green-600');
+            });
+            
+            // Filter matches by round
+            roundFilter.addEventListener('change', filterMatches);
+            
+            // Load CSV data
+            Promise.all([
+                loadCSV('jogos.csv'),
+                loadCSV('classificacao.csv')
+            ]).then(([matches, standings]) => {
+                matchesData = matches;
+                standingsData = standings;
+                
+                // Process data
+                processMatchesData();
+                processStandingsData();
+                
+                // Hide loading indicator
+                loading.classList.add('hidden');
+            }).catch(error => {
+                console.error('Error loading data:', error);
+                alert('Erro ao carregar os dados. Por favor, tente novamente mais tarde.');
+                loading.classList.add('hidden');
+            });
+            
+            // Load CSV function
+            function loadCSV(filename) {
+                return new Promise((resolve, reject) => {
+                    // Check if we're using local files or if we're in development mode
+                    // For demo purposes, we'll use hardcoded data
+                    if (filename === 'jogos.csv') {
+                        const csvData = `data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
+29/03/2025,21:30,1,São Paulo,Recife,FINISHED,0.0,0.0
+29/03/2025,21:30,1,Cruzeiro,Mirassol,FINISHED,2.0,1.0
+29/03/2025,21:30,1,Grêmio,Mineiro,FINISHED,2.0,1.0
+29/03/2025,21:30,1,Fortaleza,Fluminense,FINISHED,2.0,0.0
+29/03/2025,21:30,1,Juventude,Vitória,FINISHED,2.0,0.0
+30/03/2025,00:00,1,Flamengo,Internacional,FINISHED,1.0,1.0
+30/03/2025,19:00,1,Palmeiras,Botafogo,FINISHED,0.0,0.0
+30/03/2025,21:30,1,Vasco da Gama,Santos,FINISHED,2.0,1.0
+30/03/2025,23:00,1,Bahia,Corinthians,FINISHED,1.0,1.0
+31/03/2025,23:00,1,Bragantino,Ceará,FINISHED,2.0,2.0
+05/04/2025,21:30,2,Corinthians,Vasco da Gama,FINISHED,3.0,0.0
+05/04/2025,21:30,2,Ceará,Grêmio,FINISHED,2.0,0.0
+06/04/2025,00:00,2,Botafogo,Juventude,FINISHED,2.0,0.0
+06/04/2025,19:00,2,Fluminense,Bragantino,FINISHED,2.0,1.0
+06/04/2025,19:00,2,Mineiro,São Paulo,FINISHED,0.0,0.0
+06/04/2025,21:30,2,Mirassol,Fortaleza,FINISHED,1.0,1.0`;
+                        
+                        Papa.parse(csvData, {
+                            header: true,
+                            dynamicTyping: true,
+                            complete: (results) => {
+                                resolve(results.data);
+                            },
+                            error: (error) => {
+                                reject(error);
+                            }
+                        });
+                    } else if (filename === 'classificacao.csv') {
+                        const csvData = `Pos,Equipe,P,J,V,E,D,GP,GC,SG,%
+1,Palmeiras,13,5,4,1,0,7,2,5,86.7
+2,Flamengo,11,5,3,2,0,11,2,9,73.3
+3,Bragantino,10,5,3,1,1,6,4,2,66.7
+4,Fluminense,10,5,3,1,1,6,4,2,66.7
+5,Ceará,7,5,2,1,2,7,6,1,46.7
+6,Corinthians,7,5,2,1,2,6,6,0,46.7
+7,Cruzeiro,7,5,2,1,2,6,6,0,46.7
+8,Vasco da Gama,7,5,2,1,2,6,7,-1,46.7
+9,Juventude,7,5,2,1,2,6,11,-5,46.7
+10,São Paulo,7,5,1,4,0,5,4,1,46.7
+11,Mirassol,6,5,1,3,1,9,7,2,40.0
+12,Internacional,6,5,1,3,1,5,3,2,40.0
+13,Bahia,6,5,1,3,1,5,7,-2,40.0
+14,Fortaleza,5,5,1,2,2,5,5,0,33.3
+15,Botafogo,5,5,1,2,2,4,4,0,33.3
+16,Vitória,5,5,1,2,2,6,8,-2,33.3
+17,Mineiro,5,5,1,2,2,4,6,-2,33.3
+18,Santos,4,5,1,1,3,6,7,-1,26.7
+19,Grêmio,4,5,1,1,3,4,10,-6,26.7
+20,Recife,1,5,0,1,4,3,8,-5,6.7`;
+                        
+                        Papa.parse(csvData, {
+                            header: true,
+                            dynamicTyping: true,
+                            complete: (results) => {
+                                resolve(results.data);
+                            },
+                            error: (error) => {
+                                reject(error);
+                            }
+                        });
+                    } else {
+                        reject(new Error('Arquivo desconhecido: ' + filename));
+                    }
+                });
+            }
+            
+            // Process matches data
+            function processMatchesData() {
+                // Extract rounds
+                matchesData.forEach(match => {
+                    if (match.rodada) {
+                        rounds.add(match.rodada);
+                    }
+                });
+                
+                // Populate round filter
+                const roundsArray = Array.from(rounds).sort((a, b) => a - b);
+                roundsArray.forEach(round => {
+                    const option = document.createElement('option');
+                    option.value = round;
+                    option.textContent = `Rodada ${round}`;
+                    roundFilter.appendChild(option);
+                });
+                
+                // Display matches
+                filterMatches();
+            }
+            
+            // Process standings data
+            function processStandingsData() {
+                // Sort standings by position
+                standingsData.sort((a, b) => a.Pos - b.Pos);
+                
+                // Display standings
+                standingsData.forEach(team => {
+                    const row = document.createElement('tr');
+                    row.className = `position-${team.Pos}`;
+                    
+                    row.innerHTML = `
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium ${team.Pos <= 4 ? 'text-blue-600' : team.Pos >= 17 ? 'text-red-600' : 'text-gray-900'}">${team.Pos}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${team.Equipe}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">${team.P}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${team.J}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${team.V}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${team.E}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${team.D}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${team.GP}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${team.GC}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm ${team.SG > 0 ? 'text-green-600' : team.SG < 0 ? 'text-red-600' : 'text-gray-500'}">${team.SG}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${team['%']}</td>
+                    `;
+                    
+                    standingsBody.appendChild(row);
+                });
+            }
+            
+            // Filter matches by round
+            function filterMatches() {
+                const selectedRound = roundFilter.value;
+                
+                // Filter matches
+                const filteredMatches = selectedRound === 'all'
+                    ? matchesData
+                    : matchesData.filter(match => match.rodada == selectedRound);
+                
+                // Clear current matches
+                matchesTableBody.innerHTML = '';
+                matchesCardView.innerHTML = '';
+                
+                // Display filtered matches
+                if (filteredMatches.length === 0) {
+                    const emptyRow = document.createElement('tr');
+                    emptyRow.innerHTML = `
+                        <td colspan="6" class="px-6 py-4 text-center text-gray-500">Nenhuma partida encontrada</td>
+                    `;
+                    matchesTableBody.appendChild(emptyRow);
+                    
+                    matchesCardView.innerHTML = `
+                        <div class="col-span-3 bg-white rounded-lg shadow p-6 text-center text-gray-500">
+                            Nenhuma partida encontrada
+                        </div>
+                    `;
+                } else {
+                    // Sort matches by date and time
+                    filteredMatches.sort((a, b) => {
+                        const dateA = parseDate(a.data, a.hora);
+                        const dateB = parseDate(b.data, b.hora);
+                        return dateA - dateB;
+                    });
+                    
+                    // Display matches in table and card views
+                    filteredMatches.forEach(match => {
+                        // Table row
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${match.data}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${match.hora}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${match.rodada}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${match.time_casa} x ${match.time_visitante}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">${match.gols_casa} x ${match.gols_visitante}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${match.status === 'FINISHED' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
+                                    ${match.status === 'FINISHED' ? 'Finalizado' : 'Agendado'}
+                                </span>
+                            </td>
+                        `;
+                        matchesTableBody.appendChild(row);
+                        
+                        // Card
+                        const card = document.createElement('div');
+                        card.className = 'match-card bg-white rounded-lg shadow-md overflow-hidden';
+                        
+                        card.innerHTML = `
+                            <div class="bg-gray-50 px-4 py-2 border-b">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm font-medium text-gray-600">Rodada ${match.rodada}</span>
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${match.status === 'FINISHED' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
+                                        ${match.status === 'FINISHED' ? 'Finalizado' : 'Agendado'}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <div class="text-sm text-gray-500 mb-2">${match.data} - ${match.hora}</div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex-1 text-right">
+                                        <div class="font-medium">${match.time_casa}</div>
+                                    </div>
+                                    <div class="mx-4 text-center font-bold">
+                                        <div class="text-2xl">${match.gols_casa} x ${match.gols_visitante}</div>
+                                    </div>
+                                    <div class="flex-1 text-left">
+                                        <div class="font-medium">${match.time_visitante}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        
+                        matchesCardView.appendChild(card);
+                    });
+                }
+            }
+            
+            // Helper function to parse date
+            function parseDate(dateStr, timeStr) {
+                const [day, month, year] = dateStr.split('/');
+                const [hours, minutes] = timeStr.split(':');
+                return new Date(`${year}-${month}-${day}T${hours}:${minutes}:00`);
+            }
+        });
+    </script>
+</body>
+</html>
