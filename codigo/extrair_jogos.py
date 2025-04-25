@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # Cria a pasta 'dados' se ela não existir
-os.makedirs("dados", exist_ok=True)
+os.makedirs("../dados", exist_ok=True)
 
 # Chave da API via variáveis de ambiente (GitHub Secret)
 API_KEY = os.environ.get("FOOTBALL_API_KEY", "SUA_CHAVE_API_AQUI")
