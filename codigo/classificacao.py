@@ -1,5 +1,8 @@
 import pandas as pd
 
+# Cria a pasta 'dados' se ela não existir
+os.makedirs("dados", exist_ok=True)
+
 # Carrega a tabela de jogos
 df = pd.read_csv("../dados/jogos_brasileiro_2025.csv")
 
