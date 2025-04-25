@@ -234,7 +234,7 @@
             const tabContents = document.querySelectorAll('.tab-content');
             const refreshBtn = document.getElementById('refresh-btn');
             
-            // GitHub raw URLs - SUBSTITUA ESTAS URLS COM SEUS LINKS DO GITHUB
+            // GitHub raw URLs com os caminhos corretos
             const JOGOS_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/jogos_brasileiro_2025.csv';
             const CLASSIFICACAO_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/classificacao_brasileirao_2025.csv';
             
@@ -306,8 +306,23 @@
             
             // Function to refresh the data
             function refreshData() {
+                console.log('Iniciando atualização dos dados...');
                 refreshBtn.classList.add('refreshing');
                 loading.classList.remove('hidden');
+                
+                // Limpar cache do navegador para esta página
+                try {
+                    if (window.caches) {
+                        caches.keys().then(function(names) {
+                            for (let name of names) {
+                                caches.delete(name);
+                            }
+                            console.log('Cache do navegador limpo');
+                        });
+                    }
+                } catch (e) {
+                    console.warn('Erro ao limpar cache do navegador:', e);
+                }
                 
                 // Limpar dados existentes
                 standingsBody.innerHTML = '';
@@ -316,14 +331,71 @@
                 roundFilter.innerHTML = '<option value="all">Todas</option>';
                 rounds = new Set();
                 
+                // Forçar recarregamento dos recursos
+                const reloadingMessage = document.createElement('div');
+                reloadingMessage.style.position = 'fixed';
+                reloadingMessage.style.bottom = '20px';
+                reloadingMessage.style.right = '20px';
+                reloadingMessage.style.background = '#4CAF50';
+                reloadingMessage.style.color = 'white';
+                reloadingMessage.style.padding = '10px 20px';
+                reloadingMessage.style.borderRadius = '4px';
+                reloadingMessage.style.zIndex = '9999';
+                reloadingMessage.textContent = 'Atualizando dados...';
+                document.body.appendChild(reloadingMessage);
+                
                 // Carregar dados novamente
                 loadData().then(() => {
                     updateTimestamp();
                     refreshBtn.classList.remove('refreshing');
+                    document.body.removeChild(reloadingMessage);
+                    
+                    // Mostrar mensagem de sucesso
+                    const successMessage = document.createElement('div');
+                    successMessage.style.position = 'fixed';
+                    successMessage.style.bottom = '20px';
+                    successMessage.style.right = '20px';
+                    successMessage.style.background = '#4CAF50';
+                    successMessage.style.color = 'white';
+                    successMessage.style.padding = '10px 20px';
+                    successMessage.style.borderRadius = '4px';
+                    successMessage.style.zIndex = '9999';
+                    successMessage.textContent = 'Dados atualizados com sucesso!';
+                    document.body.appendChild(successMessage);
+                    
+                    // Remover mensagem de sucesso após 3 segundos
+                    setTimeout(() => {
+                        document.body.removeChild(successMessage);
+                    }, 3000);
+                    
+                    console.log('Atualização concluída com sucesso!');
                 }).catch(error => {
-                    console.error('Error refreshing data:', error);
-                    alert('Erro ao atualizar os dados. Por favor, tente novamente mais tarde.');
+                    console.error('Erro ao atualizar os dados:', error);
                     refreshBtn.classList.remove('refreshing');
+                    
+                    if (document.body.contains(reloadingMessage)) {
+                        document.body.removeChild(reloadingMessage);
+                    }
+                    
+                    // Mostrar mensagem de erro
+                    const errorMessage = document.createElement('div');
+                    errorMessage.style.position = 'fixed';
+                    errorMessage.style.bottom = '20px';
+                    errorMessage.style.right = '20px';
+                    errorMessage.style.background = '#F44336';
+                    errorMessage.style.color = 'white';
+                    errorMessage.style.padding = '10px 20px';
+                    errorMessage.style.borderRadius = '4px';
+                    errorMessage.style.zIndex = '9999';
+                    errorMessage.textContent = 'Erro ao atualizar os dados. Verifique o console para mais detalhes.';
+                    document.body.appendChild(errorMessage);
+                    
+                    // Remover mensagem de erro após 5 segundos
+                    setTimeout(() => {
+                        document.body.removeChild(errorMessage);
+                    }, 5000);
+                    
+                    alert('Erro ao atualizar os dados. Por favor, verifique se os arquivos CSV estão disponíveis e acessíveis.');
                 });
             }
             
@@ -350,47 +422,106 @@
                 });
             }
             
-            // Load CSV function with cache busting
+            // Load CSV function with improved cache busting
             function loadCSV(url) {
                 return new Promise((resolve, reject) => {
-                    // Adiciona um timestamp à URL para evitar cache
-                    const cacheBuster = `?_=${new Date().getTime()}`;
+                    // Adiciona um timestamp único para evitar cache
+                    const timestamp = new Date().getTime();
+                    const cacheBuster = `?v=${timestamp}`;
                     const finalUrl = url + cacheBuster;
                     
-                    console.log(`Loading data from: ${finalUrl}`);
+                    console.log(`Carregando dados de: ${finalUrl}`);
                     
-                    Papa.parse(finalUrl, {
-                        download: true,
-                        header: true,
-                        dynamicTyping: true,
-                        complete: (results) => {
-                            if (results.errors && results.errors.length > 0) {
-                                console.warn('Avisos ao carregar CSV:', results.errors);
-                            }
-                            resolve(results.data);
-                        },
-                        error: (error) => {
-                            console.error(`Failed to load ${finalUrl}. Trying with CORS proxy...`);
-                            // Se falhar, tenta com proxy CORS
-                            const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
-                            Papa.parse(corsProxyUrl + url + cacheBuster, {
-                                download: true,
-                                header: true,
-                                dynamicTyping: true,
-                                complete: (results) => {
-                                    if (results.errors && results.errors.length > 0) {
-                                        console.warn('Avisos ao carregar CSV com proxy:', results.errors);
-                                    }
-                                    resolve(results.data);
-                                },
-                                error: (proxyError) => {
-                                    console.error('Both direct and proxy attempts failed.', proxyError);
-                                    reject(proxyError);
+                    // Mostrar mensagem de carregamento
+                    if (url.includes('jogos')) {
+                        console.log('Carregando partidas...');
+                    } else {
+                        console.log('Carregando classificação...');
+                    }
+                    
+                    // Função para tentar carregar o CSV com número máximo de tentativas
+                    function attemptLoad(attempts = 3) {
+                        Papa.parse(finalUrl, {
+                            download: true,
+                            header: true,
+                            dynamicTyping: true,
+                            complete: (results) => {
+                                if (results.errors && results.errors.length > 0) {
+                                    console.warn('Avisos ao carregar CSV:', results.errors);
                                 }
-                            });
-                        }
-                    });
+                                
+                                if (results.data && results.data.length > 0) {
+                                    console.log(`Dados carregados com sucesso: ${results.data.length} registros`);
+                                    resolve(results.data);
+                                } else {
+                                    console.warn('Dados CSV vazios ou inválidos');
+                                    if (attempts > 1) {
+                                        console.log(`Tentando novamente... (${attempts-1} tentativas restantes)`);
+                                        setTimeout(() => attemptLoad(attempts - 1), 1000);
+                                    } else {
+                                        reject(new Error('Dados CSV vazios ou inválidos após várias tentativas'));
+                                    }
+                                }
+                            },
+                            error: (error) => {
+                                console.error(`Erro ao carregar ${finalUrl}:`, error);
+                                
+                                if (attempts > 1) {
+                                    console.log(`Tentando novamente... (${attempts-1} tentativas restantes)`);
+                                    setTimeout(() => attemptLoad(attempts - 1), 1000);
+                                } else {
+                                    console.error('Falha em todas as tentativas de carregamento direto.');
+                                    
+                                    // Tentar com proxy CORS como último recurso
+                                    console.log('Tentando com proxy CORS...');
+                                    const corsProxyUrl = 'https://corsproxy.io/?';
+                                    Papa.parse(corsProxyUrl + encodeURIComponent(url + cacheBuster), {
+                                        download: true,
+                                        header: true,
+                                        dynamicTyping: true,
+                                        complete: (results) => {
+                                            if (results.errors && results.errors.length > 0) {
+                                                console.warn('Avisos ao carregar CSV com proxy:', results.errors);
+                                            }
+                                            if (results.data && results.data.length > 0) {
+                                                console.log(`Dados carregados com sucesso via proxy: ${results.data.length} registros`);
+                                                resolve(results.data);
+                                            } else {
+                                                console.error('Dados CSV vazios ou inválidos mesmo com proxy');
+                                                reject(new Error('Dados CSV vazios ou inválidos após todas as tentativas'));
+                                            }
+                                        },
+                                        error: (proxyError) => {
+                                            console.error('Todas as tentativas falharam.', proxyError);
+                                            reject(proxyError);
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
+                    
+                    // Iniciar o processo de carregamento
+                    attemptLoad();
                 });
+            }
+            
+            // Function to check if a file is accessible
+            function checkFileAccess(url) {
+                return fetch(url, { method: 'HEAD' })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log(`Arquivo acessível: ${url}`);
+                            return true;
+                        } else {
+                            console.error(`Arquivo não acessível: ${url}, status: ${response.status}`);
+                            return false;
+                        }
+                    })
+                    .catch(error => {
+                        console.error(`Erro ao verificar acesso ao arquivo: ${url}`, error);
+                        return false;
+                    });
             }
             
             // Process matches data
@@ -483,7 +614,7 @@
                         return dateA - dateB;
                     });
                     
-                    // Display matches in table and card views
+                 // Display matches in table and card views
                     filteredMatches.forEach(match => {
                         // Table row
                         const row = document.createElement('tr');
