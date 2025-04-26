@@ -6,7 +6,36 @@
     <title>Brasileirão 2025 - Resultados e Classificação</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js">
+function renderMatches(data, containerId, showScore) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+
+  data.forEach(match => {
+    const matchDiv = document.createElement('div');
+    matchDiv.className = 'p-4 border border-gray-200 rounded-lg shadow-sm';
+
+    const score = showScore ? \`\${match.gols_casa} x \${match.gols_visitante}\` : '- x -';
+    const status = showScore ? 'Finalizado' : 'Agendado';
+    const statusClass = showScore ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800';
+
+    matchDiv.innerHTML = \`
+      <div class="flex justify-between text-sm text-gray-600 mb-2">
+        <span>Rodada \${match.rodada}</span>
+        <span>\${match.data} \${match.hora}</span>
+      </div>
+      <div class="flex justify-between items-center font-semibold">
+        <span>\${match.time_casa}</span>
+        <span>\${score}</span>
+        <span>\${match.time_visitante}</span>
+      </div>
+      <div class="mt-2 text-xs px-2 inline-block rounded-full \${statusClass}">\${status}</div>
+    \`;
+
+    container.appendChild(matchDiv);
+  });
+}
+</script>
     <style>
         :root {
             --primary-color: #009c3b;
@@ -90,9 +119,14 @@
                     <button data-tab="tab-table" class="tab-btn bg-white text-green-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
                         <i class="fas fa-table mr-2"></i>Classificação
                     </button>
-                    <button data-tab="tab-matches" class="tab-btn bg-transparent text-white border border-white px-4 py-2 rounded-lg font-medium hover:bg-white hover:bg-opacity-20 transition">
-                        <i class="fas fa-futbol mr-2"></i>Jogos
-                    </button>
+                    
+    <button data-tab="tab-matches-finished" class="tab-btn bg-transparent text-white border border-white px-4 py-2 rounded-lg font-medium hover:bg-white hover:bg-opacity-20 transition">
+      <i class="fas fa-flag-checkered mr-2"></i>Jogos Realizados
+    </button>
+    <button data-tab="tab-matches-upcoming" class="tab-btn bg-transparent text-white border border-white px-4 py-2 rounded-lg font-medium hover:bg-white hover:bg-opacity-20 transition">
+      <i class="fas fa-calendar-alt mr-2"></i>Próximos Jogos
+    </button>
+    
                     <button id="refresh-btn" class="refresh-button bg-white text-green-700 px-3 py-2 rounded-lg font-medium hover:bg-gray-100 transition ml-2">
                         <i class="fas fa-sync-alt"></i>
                     </button>
@@ -110,6 +144,20 @@
     <main class="container mx-auto px-4 py-8">
         <!-- Tab Content -->
         <div class="tab-content active" id="tab-table">
+<div class="tab-content" id="tab-matches-finished">
+  <div class="bg-white rounded-lg shadow-md p-4">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Jogos Realizados</h2>
+    <div id="finished-matches" class="space-y-4"></div>
+  </div>
+</div>
+
+<div class="tab-content" id="tab-matches-upcoming">
+  <div class="bg-white rounded-lg shadow-md p-4">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Próximos Jogos</h2>
+    <div id="upcoming-matches" class="space-y-4"></div>
+  </div>
+</div>
+
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <div class="p-4 bg-gray-50 border-b">
                     <h2 class="text-xl font-semibold text-gray-800">Classificação</h2>
@@ -140,14 +188,7 @@
         </div>
 
         <!-- Matches Tab -->
-        <div class="tab-content" id="tab-matches">
-            <!-- Filter Section -->
-            <div class="mb-8 bg-white rounded-lg shadow-md p-4">
-                <div class="flex flex-wrap items-center justify-between">
-                    <div class="w-full md:w-auto mb-4 md:mb-0">
-                        <h2 class="text-xl font-semibold text-gray-800">Filtrar Jogos</h2>
-                    </div>
-                    <div class="flex flex-wrap items-center space-x-4">
+        <div class="flex flex-wrap items-center space-x-4">
                         <div class="flex items-center">
                             <label for="round-filter" class="mr-2 text-gray-700">Rodada:</label>
                             <select id="round-filter" class="form-select rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50">
@@ -235,8 +276,11 @@
             const refreshBtn = document.getElementById('refresh-btn');
             
             // GitHub raw URLs com os caminhos corretos
-            const JOGOS_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/jogos_brasileiro_2025.csv';
-            const CLASSIFICACAO_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/classificacao.csv';
+            
+const CLASSIFICACAO_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/classificacao.csv';
+const RESULTADOS_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/resultados.csv';
+const PROXIMOS_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/proximos.csv';
+const CLASSIFICACAO_CSV_URL = 'https://raw.githubusercontent.com/tlvzz/BR2025/refs/heads/main/dados/classificacao.csv';
             
             // Set current date for last update
             function updateTimestamp() {
@@ -400,21 +444,21 @@
             }
             
             // Load data function
-            function loadData() {
-                return Promise.all([
-                    loadCSV(JOGOS_CSV_URL),
-                    loadCSV(CLASSIFICACAO_CSV_URL)
-                ]).then(([matches, standings]) => {
-                    matchesData = matches;
-                    standingsData = standings;
-                    
-                    // Process data
-                    processMatchesData();
-                    processStandingsData();
-                    
-                    // Hide loading indicator
-                    loading.classList.add('hidden');
-                }).catch(error => {
+            
+function loadData() {
+  return Promise.all([
+    loadCSV(CLASSIFICACAO_CSV_URL),
+    loadCSV(RESULTADOS_CSV_URL),
+    loadCSV(PROXIMOS_CSV_URL)
+  ]).then(([standings, results, upcoming]) => {
+    standingsData = standings;
+    renderStandings();
+    renderMatches(results, 'finished-matches', true);
+    renderMatches(upcoming, 'upcoming-matches', false);
+    loading.classList.add('hidden');
+  });
+}
+).catch(error => {
                     console.error('Error loading data:', error);
                     alert('Erro ao carregar os dados. Por favor, verifique se os arquivos CSV estão disponíveis e acessíveis.');
                     loading.classList.add('hidden');
@@ -678,6 +722,35 @@
             // Load data on page load
             loadData();
         });
-    </script>
+    
+function renderMatches(data, containerId, showScore) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+
+  data.forEach(match => {
+    const matchDiv = document.createElement('div');
+    matchDiv.className = 'p-4 border border-gray-200 rounded-lg shadow-sm';
+
+    const score = showScore ? \`\${match.gols_casa} x \${match.gols_visitante}\` : '- x -';
+    const status = showScore ? 'Finalizado' : 'Agendado';
+    const statusClass = showScore ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800';
+
+    matchDiv.innerHTML = \`
+      <div class="flex justify-between text-sm text-gray-600 mb-2">
+        <span>Rodada \${match.rodada}</span>
+        <span>\${match.data} \${match.hora}</span>
+      </div>
+      <div class="flex justify-between items-center font-semibold">
+        <span>\${match.time_casa}</span>
+        <span>\${score}</span>
+        <span>\${match.time_visitante}</span>
+      </div>
+      <div class="mt-2 text-xs px-2 inline-block rounded-full \${statusClass}">\${status}</div>
+    \`;
+
+    container.appendChild(matchDiv);
+  });
+}
+</script>
 </body>
 </html>
