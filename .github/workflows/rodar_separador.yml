@@ -1,4 +1,4 @@
-name: Atualizar Classificação
+name: Rodar Separador
 
 on:
   schedule:
