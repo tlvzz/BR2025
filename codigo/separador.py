@@ -27,7 +27,7 @@ jogos_realizados = df[df["status"] == "FINISHED"]
 jogos_a_realizar = df[df["status"] != "FINISHED"]
 
 # Salva os dois novos CSVs
-jogos_realizados.to_csv("jogos_realizados.csv", index=False)
-jogos_a_realizar.to_csv("jogos_a_realizar.csv", index=False)
+jogos_realizados.to_csv("dados/resultados.csv", index=False)
+jogos_a_realizar.to_csv("dados/tabela.csv", index=False)
 
 print("Arquivos gerados com sucesso.")
