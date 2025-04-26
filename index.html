@@ -451,7 +451,6 @@ function loadData() {
     loadCSV(PROXIMOS_CSV_URL)
   ]).then(([standings, results, upcoming]) => {
     standingsData = standings;
-    renderStandings();
     renderMatches(results, 'finished-matches', true);
     renderMatches(upcoming, 'upcoming-matches', false);
     loading.classList.add('hidden');
