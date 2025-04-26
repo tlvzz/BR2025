@@ -5,7 +5,7 @@ import os
 # Cria a pasta 'dados' se ela não existir
 os.makedirs("dados", exist_ok=True)
 # Caminho do arquivo de entrada
-arquivo_entrada = "jogos_brasileiro_2025.csv"
+arquivo_entrada = "dados/jogos_brasileiro_2025.csv"
 
 # Carrega o DataFrame
 df = pd.read_csv(arquivo_entrada)
