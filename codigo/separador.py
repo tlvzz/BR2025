@@ -1,5 +1,9 @@
+import requests
 import pandas as pd
+import os
 
+# Cria a pasta 'dados' se ela não existir
+os.makedirs("dados", exist_ok=True)
 # Caminho do arquivo de entrada
 arquivo_entrada = "jogos_brasileiro_2025.csv"
 
