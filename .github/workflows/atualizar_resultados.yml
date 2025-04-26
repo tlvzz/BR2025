@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Executar script
-        run: python codigo/extrair_jogos.py
+        run: python codigo/update_resultados.py
         env:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
 
