@@ -49,3 +49,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 20/04/2025,21:30,5,Fortaleza,Palmeiras,FINISHED,1.0,2.0
 20/04/2025,23:30,5,R B Bragantino,Cruzeiro,FINISHED,1.0,0.0
 21/04/2025,23:00,5,Bahia,Ceará,FINISHED,1.0,0.0
+26/04/2025,19:00,6,Internacional,Juventude,FINISHED,3.0,1.0
+26/04/2025,21:30,6,Mirassol,Atlético-MG,FINISHED,2.0,2.0
+26/04/2025,21:30,6,Ceará,São Paulo,FINISHED,1.0,1.0
+26/04/2025,23:00,6,Sport,Fortaleza,FINISHED,0.0,0.0
+27/04/2025,00:00,6,Botafogo,Fluminense,FINISHED,2.0,0.0
