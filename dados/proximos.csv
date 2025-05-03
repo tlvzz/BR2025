@@ -1,5 +1,4 @@
 data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
-03/05/2025,00:30,7,São Paulo,Fortaleza,TIMED,,
 03/05/2025,21:30,7,Fluminense,Sport,TIMED,,
 03/05/2025,21:30,7,Corinthians,Internacional,TIMED,,
 03/05/2025,21:30,7,Ceará,Vitória,TIMED,,
@@ -29,7 +28,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 18/05/2025,21:30,9,R B Bragantino,Palmeiras,TIMED,,
 18/05/2025,23:30,9,Cruzeiro,Atlético-MG,TIMED,,
 18/05/2025,23:30,9,Internacional,Mirassol,TIMED,,
-24/05/2025,19:00,10,Botafogo,Ceará,TIMED,,
+04/06/2025,23:00,10,Botafogo,Ceará,TIMED,,
 24/05/2025,21:30,10,Fluminense,Vasco,TIMED,,
 24/05/2025,21:30,10,São Paulo,Mirassol,TIMED,,
 25/05/2025,00:00,10,Atlético-MG,Corinthians,TIMED,,
