@@ -59,7 +59,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 27/04/2025,21:30,6,Cruzeiro,Vasco da Gama,FINISHED,1.0,0.0
 27/04/2025,21:30,6,Vitória,Grêmio,FINISHED,1.0,1.0
 27/04/2025,23:30,6,Santos,Bragantino,FINISHED,1.0,2.0
-03/05/2025,00:30,7,São Paulo,Fortaleza,TIMED,,
+03/05/2025,00:30,7,São Paulo,Fortaleza,FINISHED,0.0,0.0
 03/05/2025,21:30,7,Fluminense,Recife,TIMED,,
 03/05/2025,21:30,7,Corinthians,Internacional,TIMED,,
 03/05/2025,21:30,7,Ceará,Vitória,TIMED,,
@@ -89,7 +89,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 18/05/2025,21:30,9,Bragantino,Palmeiras,TIMED,,
 18/05/2025,23:30,9,Cruzeiro,Mineiro,TIMED,,
 18/05/2025,23:30,9,Internacional,Mirassol,TIMED,,
-24/05/2025,19:00,10,Botafogo,Ceará,TIMED,,
+04/06/2025,23:00,10,Botafogo,Ceará,TIMED,,
 24/05/2025,21:30,10,Fluminense,Vasco da Gama,TIMED,,
 24/05/2025,21:30,10,São Paulo,Mirassol,TIMED,,
 25/05/2025,00:00,10,Mineiro,Corinthians,TIMED,,
