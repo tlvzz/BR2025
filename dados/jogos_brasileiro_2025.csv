@@ -60,10 +60,10 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 27/04/2025,21:30,6,Vitória,Grêmio,FINISHED,1.0,1.0
 27/04/2025,23:30,6,Santos,Bragantino,FINISHED,1.0,2.0
 03/05/2025,00:30,7,São Paulo,Fortaleza,FINISHED,0.0,0.0
-03/05/2025,21:30,7,Fluminense,Recife,TIMED,,
-03/05/2025,21:30,7,Corinthians,Internacional,TIMED,,
-03/05/2025,21:30,7,Ceará,Vitória,TIMED,,
-04/05/2025,00:00,7,Bahia,Botafogo,TIMED,,
+03/05/2025,21:30,7,Fluminense,Recife,FINISHED,2.0,1.0
+03/05/2025,21:30,7,Corinthians,Internacional,FINISHED,4.0,2.0
+03/05/2025,21:30,7,Ceará,Vitória,FINISHED,1.0,0.0
+04/05/2025,00:00,7,Bahia,Botafogo,FINISHED,1.0,0.0
 04/05/2025,19:00,7,Vasco da Gama,Palmeiras,TIMED,,
 04/05/2025,19:00,7,Grêmio,Santos,TIMED,,
 04/05/2025,21:30,7,Cruzeiro,Flamengo,TIMED,,
