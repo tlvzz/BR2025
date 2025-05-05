@@ -64,9 +64,9 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 03/05/2025,21:30,7,Corinthians,Internacional,FINISHED,4.0,2.0
 03/05/2025,21:30,7,Ceará,Vitória,FINISHED,1.0,0.0
 04/05/2025,00:00,7,Bahia,Botafogo,FINISHED,1.0,0.0
-04/05/2025,19:00,7,Vasco da Gama,Palmeiras,TIMED,,
-04/05/2025,19:00,7,Grêmio,Santos,TIMED,,
-04/05/2025,21:30,7,Cruzeiro,Flamengo,TIMED,,
+04/05/2025,19:00,7,Vasco da Gama,Palmeiras,FINISHED,0.0,1.0
+04/05/2025,19:00,7,Grêmio,Santos,FINISHED,1.0,0.0
+04/05/2025,21:30,7,Cruzeiro,Flamengo,FINISHED,2.0,1.0
 05/05/2025,22:00,7,Bragantino,Mirassol,TIMED,,
 05/05/2025,23:00,7,Juventude,Mineiro,TIMED,,
 10/05/2025,19:00,8,Fortaleza,Juventude,TIMED,,
