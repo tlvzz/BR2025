@@ -69,3 +69,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 04/05/2025,21:30,7,Cruzeiro,Flamengo,FINISHED,2.0,1.0
 05/05/2025,22:00,7,R B Bragantino,Mirassol,FINISHED,1.0,0.0
 05/05/2025,23:00,7,Juventude,Atlético-MG,FINISHED,0.0,1.0
+10/05/2025,19:00,8,Fortaleza,Juventude,FINISHED,5.0,0.0
+10/05/2025,21:30,8,Mirassol,Corinthians,FINISHED,3.0,1.0
+10/05/2025,21:30,8,Grêmio,R B Bragantino,FINISHED,1.0,1.0
+10/05/2025,21:30,8,Vitória,Vasco,FINISHED,2.0,1.0
+11/05/2025,00:00,8,Flamengo,Bahia,FINISHED,1.0,0.0
