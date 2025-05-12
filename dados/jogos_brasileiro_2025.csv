@@ -74,10 +74,10 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 10/05/2025,21:30,8,Grêmio,Bragantino,FINISHED,1.0,1.0
 10/05/2025,21:30,8,Vitória,Vasco da Gama,FINISHED,2.0,1.0
 11/05/2025,00:00,8,Flamengo,Bahia,FINISHED,1.0,0.0
-11/05/2025,19:00,8,Recife,Cruzeiro,TIMED,,
-11/05/2025,20:30,8,Palmeiras,São Paulo,TIMED,,
-11/05/2025,20:30,8,Mineiro,Fluminense,TIMED,,
-11/05/2025,23:00,8,Botafogo,Internacional,TIMED,,
+11/05/2025,19:00,8,Recife,Cruzeiro,FINISHED,0.0,4.0
+11/05/2025,20:30,8,Palmeiras,São Paulo,FINISHED,1.0,0.0
+11/05/2025,20:30,8,Mineiro,Fluminense,FINISHED,3.0,2.0
+11/05/2025,23:00,8,Botafogo,Internacional,FINISHED,4.0,0.0
 12/05/2025,23:00,8,Santos,Ceará,TIMED,,
 17/05/2025,19:00,9,Ceará,Recife,TIMED,,
 17/05/2025,21:30,9,Vasco da Gama,Fortaleza,TIMED,,
