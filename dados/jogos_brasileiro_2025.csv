@@ -70,7 +70,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 05/05/2025,22:00,7,Bragantino,Mirassol,FINISHED,1.0,0.0
 05/05/2025,23:00,7,Juventude,Mineiro,FINISHED,0.0,1.0
 10/05/2025,19:00,8,Fortaleza,Juventude,FINISHED,5.0,0.0
-10/05/2025,21:30,8,Mirassol,Corinthians,FINISHED,3.0,1.0
+10/05/2025,21:30,8,Mirassol,Corinthians,FINISHED,2.0,1.0
 10/05/2025,21:30,8,Grêmio,Bragantino,FINISHED,1.0,1.0
 10/05/2025,21:30,8,Vitória,Vasco da Gama,FINISHED,2.0,1.0
 11/05/2025,00:00,8,Flamengo,Bahia,FINISHED,1.0,0.0
@@ -78,7 +78,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 11/05/2025,20:30,8,Palmeiras,São Paulo,FINISHED,1.0,0.0
 11/05/2025,20:30,8,Mineiro,Fluminense,FINISHED,3.0,2.0
 11/05/2025,23:00,8,Botafogo,Internacional,FINISHED,4.0,0.0
-12/05/2025,23:00,8,Santos,Ceará,TIMED,,
+12/05/2025,23:00,8,Santos,Ceará,FINISHED,0.0,0.0
 17/05/2025,19:00,9,Ceará,Recife,TIMED,,
 17/05/2025,21:30,9,Vasco da Gama,Fortaleza,TIMED,,
 18/05/2025,00:00,9,São Paulo,Grêmio,TIMED,,
