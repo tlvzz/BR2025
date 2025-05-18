@@ -79,9 +79,9 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 11/05/2025,20:30,8,Mineiro,Fluminense,FINISHED,3.0,2.0
 11/05/2025,23:00,8,Botafogo,Internacional,FINISHED,4.0,0.0
 12/05/2025,23:00,8,Santos,Ceará,FINISHED,0.0,0.0
-17/05/2025,19:00,9,Ceará,Recife,TIMED,,
-17/05/2025,21:30,9,Vasco da Gama,Fortaleza,TIMED,,
-18/05/2025,00:00,9,São Paulo,Grêmio,TIMED,,
+17/05/2025,19:00,9,Ceará,Recife,FINISHED,2.0,0.0
+17/05/2025,21:30,9,Vasco da Gama,Fortaleza,FINISHED,3.0,0.0
+18/05/2025,00:00,9,São Paulo,Grêmio,FINISHED,2.0,1.0
 18/05/2025,19:00,9,Corinthians,Santos,TIMED,,
 18/05/2025,19:00,9,Bahia,Vitória,TIMED,,
 18/05/2025,19:00,9,Juventude,Fluminense,TIMED,,
