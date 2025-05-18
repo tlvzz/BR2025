@@ -79,3 +79,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 11/05/2025,20:30,8,Atlético-MG,Fluminense,FINISHED,3.0,2.0
 11/05/2025,23:00,8,Botafogo,Internacional,FINISHED,4.0,0.0
 12/05/2025,23:00,8,Santos,Ceará,FINISHED,0.0,0.0
+17/05/2025,19:00,9,Ceará,Sport,FINISHED,2.0,0.0
+17/05/2025,21:30,9,Vasco,Fortaleza,FINISHED,3.0,0.0
+18/05/2025,00:00,9,São Paulo,Grêmio,FINISHED,2.0,1.0
