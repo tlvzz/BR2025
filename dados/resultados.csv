@@ -92,3 +92,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 24/05/2025,21:30,10,Fluminense,Vasco,FINISHED,2.0,1.0
 24/05/2025,21:30,10,São Paulo,Mirassol,FINISHED,0.0,2.0
 25/05/2025,00:00,10,Atlético-MG,Corinthians,FINISHED,0.0,0.0
+25/05/2025,14:00,10,Grêmio,Bahia,FINISHED,1.0,0.0
+25/05/2025,19:00,10,Palmeiras,Flamengo,FINISHED,0.0,2.0
+25/05/2025,19:00,10,Sport,Internacional,FINISHED,1.0,1.0
+25/05/2025,21:30,10,Vitória,Santos,FINISHED,0.0,1.0
+25/05/2025,23:30,10,Fortaleza,Cruzeiro,FINISHED,0.0,2.0
