@@ -98,7 +98,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 25/05/2025,19:00,10,Recife,Internacional,FINISHED,1.0,1.0
 25/05/2025,21:30,10,Vitória,Santos,FINISHED,0.0,1.0
 25/05/2025,23:30,10,Fortaleza,Cruzeiro,FINISHED,0.0,2.0
-26/05/2025,23:00,10,Bragantino,Juventude,IN_PLAY,,
+26/05/2025,23:00,10,Bragantino,Juventude,FINISHED,1.0,0.0
 01/06/2025,00:00,11,Vasco da Gama,Bragantino,TIMED,,
 01/06/2025,14:00,11,Mirassol,Recife,TIMED,,
 01/06/2025,19:00,11,Juventude,Grêmio,TIMED,,
