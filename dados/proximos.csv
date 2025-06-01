@@ -1,6 +1,5 @@
 data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 04/06/2025,23:00,10,Botafogo,Ceará,TIMED,,
-01/06/2025,00:00,11,Vasco,R B Bragantino,TIMED,,
 01/06/2025,14:00,11,Mirassol,Sport,TIMED,,
 01/06/2025,19:00,11,Juventude,Grêmio,TIMED,,
 01/06/2025,19:00,11,Santos,Botafogo,TIMED,,
@@ -9,7 +8,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 01/06/2025,21:30,11,Corinthians,Vitória,TIMED,,
 01/06/2025,22:30,11,Cruzeiro,Palmeiras,TIMED,,
 01/06/2025,23:30,11,Internacional,Fluminense,TIMED,,
-31/05/2025,21:30,11,Bahia,São Paulo,TIMED,,
 11/06/2025,00:00,12,Fluminense,Ceará,POSTPONED,,
 11/06/2025,00:00,12,Botafogo,Mirassol,POSTPONED,,
 11/06/2025,00:00,12,Palmeiras,Juventude,POSTPONED,,
