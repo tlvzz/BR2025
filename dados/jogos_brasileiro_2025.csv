@@ -100,14 +100,14 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 25/05/2025,23:30,10,Fortaleza,Cruzeiro,FINISHED,0.0,2.0
 26/05/2025,23:00,10,Bragantino,Juventude,FINISHED,1.0,0.0
 01/06/2025,00:00,11,Vasco da Gama,Bragantino,FINISHED,0.0,2.0
-01/06/2025,14:00,11,Mirassol,Recife,TIMED,,
-01/06/2025,19:00,11,Juventude,Grêmio,TIMED,,
-01/06/2025,19:00,11,Santos,Botafogo,TIMED,,
-01/06/2025,21:30,11,Ceará,Mineiro,TIMED,,
-01/06/2025,21:30,11,Flamengo,Fortaleza,TIMED,,
-01/06/2025,21:30,11,Corinthians,Vitória,TIMED,,
-01/06/2025,22:30,11,Cruzeiro,Palmeiras,TIMED,,
-01/06/2025,23:30,11,Internacional,Fluminense,TIMED,,
+01/06/2025,14:00,11,Mirassol,Recife,FINISHED,1.0,0.0
+01/06/2025,19:00,11,Juventude,Grêmio,FINISHED,0.0,2.0
+01/06/2025,19:00,11,Santos,Botafogo,FINISHED,0.0,1.0
+01/06/2025,21:30,11,Ceará,Mineiro,FINISHED,0.0,1.0
+01/06/2025,21:30,11,Flamengo,Fortaleza,FINISHED,5.0,0.0
+01/06/2025,21:30,11,Corinthians,Vitória,FINISHED,0.0,0.0
+01/06/2025,22:30,11,Cruzeiro,Palmeiras,FINISHED,2.0,1.0
+01/06/2025,23:30,11,Internacional,Fluminense,FINISHED,0.0,2.0
 31/05/2025,21:30,11,Bahia,São Paulo,FINISHED,2.0,1.0
 11/06/2025,00:00,12,Fluminense,Ceará,POSTPONED,,
 11/06/2025,00:00,12,Botafogo,Mirassol,POSTPONED,,
