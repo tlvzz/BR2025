@@ -89,7 +89,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 18/05/2025,21:30,9,Bragantino,Palmeiras,FINISHED,1.0,2.0
 18/05/2025,23:30,9,Cruzeiro,Mineiro,FINISHED,0.0,0.0
 18/05/2025,23:30,9,Internacional,Mirassol,FINISHED,1.0,1.0
-04/06/2025,23:00,10,Botafogo,Ceará,IN_PLAY,,
+04/06/2025,23:00,10,Botafogo,Ceará,FINISHED,3.0,2.0
 24/05/2025,21:30,10,Fluminense,Vasco da Gama,FINISHED,2.0,1.0
 24/05/2025,21:30,10,São Paulo,Mirassol,FINISHED,0.0,2.0
 25/05/2025,00:00,10,Mineiro,Corinthians,FINISHED,0.0,0.0
