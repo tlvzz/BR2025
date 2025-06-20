@@ -90,15 +90,15 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 18/05/2025,23:30,9,Cruzeiro,Mineiro,FINISHED,0.0,0.0
 18/05/2025,23:30,9,Internacional,Mirassol,FINISHED,1.0,1.0
 04/06/2025,23:00,10,Botafogo,Ceará,FINISHED,3.0,2.0
-24/05/2025,21:30,10,Fluminense,Vasco da Gama,FINISHED,2.0,1.0
-24/05/2025,21:30,10,São Paulo,Mirassol,FINISHED,0.0,2.0
-25/05/2025,00:00,10,Mineiro,Corinthians,FINISHED,0.0,0.0
-25/05/2025,14:00,10,Grêmio,Bahia,FINISHED,1.0,0.0
-25/05/2025,19:00,10,Palmeiras,Flamengo,FINISHED,0.0,2.0
-25/05/2025,19:00,10,Recife,Internacional,FINISHED,1.0,1.0
-25/05/2025,21:30,10,Vitória,Santos,FINISHED,0.0,1.0
-25/05/2025,23:30,10,Fortaleza,Cruzeiro,FINISHED,0.0,2.0
-26/05/2025,23:00,10,Bragantino,Juventude,FINISHED,1.0,0.0
+24/05/2025,21:30,10,Fluminense,Vasco da Gama,TIMED,,
+24/05/2025,21:30,10,São Paulo,Mirassol,TIMED,,
+25/05/2025,00:00,10,Mineiro,Corinthians,TIMED,,
+25/05/2025,14:00,10,Grêmio,Bahia,TIMED,,
+25/05/2025,19:00,10,Palmeiras,Flamengo,TIMED,,
+25/05/2025,19:00,10,Recife,Internacional,TIMED,,
+25/05/2025,21:30,10,Vitória,Santos,TIMED,,
+25/05/2025,23:30,10,Fortaleza,Cruzeiro,TIMED,,
+26/05/2025,23:00,10,Bragantino,Juventude,TIMED,,
 01/06/2025,00:00,11,Vasco da Gama,Bragantino,FINISHED,0.0,2.0
 01/06/2025,14:00,11,Mirassol,Recife,FINISHED,1.0,0.0
 01/06/2025,19:00,11,Juventude,Grêmio,FINISHED,0.0,2.0
@@ -113,12 +113,12 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 11/06/2025,00:00,12,Botafogo,Mirassol,POSTPONED,,
 11/06/2025,00:00,12,Palmeiras,Juventude,POSTPONED,,
 11/06/2025,00:00,12,Recife,Flamengo,POSTPONED,,
-12/06/2025,22:00,12,Bragantino,Bahia,FINISHED,0.0,3.0
-12/06/2025,22:00,12,Vitória,Cruzeiro,FINISHED,0.0,0.0
-12/06/2025,22:30,12,Fortaleza,Santos,FINISHED,2.0,3.0
-12/06/2025,23:00,12,Grêmio,Corinthians,FINISHED,1.0,1.0
-13/06/2025,00:30,12,São Paulo,Vasco da Gama,FINISHED,1.0,3.0
-13/06/2025,00:30,12,Mineiro,Internacional,FINISHED,2.0,0.0
+12/06/2025,22:00,12,Bragantino,Bahia,TIMED,,
+12/06/2025,22:00,12,Vitória,Cruzeiro,TIMED,,
+12/06/2025,22:30,12,Fortaleza,Santos,TIMED,,
+12/06/2025,23:00,12,Grêmio,Corinthians,TIMED,,
+13/06/2025,00:30,12,São Paulo,Vasco da Gama,TIMED,,
+13/06/2025,00:30,12,Mineiro,Internacional,TIMED,,
 12/07/2025,00:00,13,Flamengo,São Paulo,SCHEDULED,,
 12/07/2025,00:00,13,Vasco da Gama,Botafogo,SCHEDULED,,
 12/07/2025,00:00,13,Corinthians,Bragantino,SCHEDULED,,
