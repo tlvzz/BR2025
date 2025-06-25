@@ -90,15 +90,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 18/05/2025,23:30,9,Cruzeiro,Atlético-MG,FINISHED,0.0,0.0
 18/05/2025,23:30,9,Internacional,Mirassol,FINISHED,1.0,1.0
 04/06/2025,23:00,10,Botafogo,Ceará,FINISHED,3.0,2.0
-24/05/2025,21:30,10,Fluminense,Vasco,FINISHED,2.0,1.0
-24/05/2025,21:30,10,São Paulo,Mirassol,FINISHED,0.0,2.0
-25/05/2025,00:00,10,Atlético-MG,Corinthians,FINISHED,0.0,0.0
-25/05/2025,14:00,10,Grêmio,Bahia,FINISHED,1.0,0.0
-25/05/2025,19:00,10,Palmeiras,Flamengo,FINISHED,0.0,2.0
-25/05/2025,19:00,10,Sport,Internacional,FINISHED,1.0,1.0
-25/05/2025,21:30,10,Vitória,Santos,FINISHED,0.0,1.0
-25/05/2025,23:30,10,Fortaleza,Cruzeiro,FINISHED,0.0,2.0
-26/05/2025,23:00,10,R B Bragantino,Juventude,FINISHED,1.0,0.0
 01/06/2025,00:00,11,Vasco,R B Bragantino,FINISHED,0.0,2.0
 01/06/2025,14:00,11,Mirassol,Sport,FINISHED,1.0,0.0
 01/06/2025,19:00,11,Juventude,Grêmio,FINISHED,0.0,2.0
@@ -109,9 +100,3 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 01/06/2025,22:30,11,Cruzeiro,Palmeiras,FINISHED,2.0,1.0
 01/06/2025,23:30,11,Internacional,Fluminense,FINISHED,0.0,2.0
 31/05/2025,21:30,11,Bahia,São Paulo,FINISHED,2.0,1.0
-12/06/2025,22:00,12,R B Bragantino,Bahia,FINISHED,0.0,3.0
-12/06/2025,22:00,12,Vitória,Cruzeiro,FINISHED,0.0,0.0
-12/06/2025,22:30,12,Fortaleza,Santos,FINISHED,2.0,3.0
-12/06/2025,23:00,12,Grêmio,Corinthians,FINISHED,1.0,1.0
-13/06/2025,00:30,12,São Paulo,Vasco,FINISHED,1.0,3.0
-13/06/2025,00:30,12,Atlético-MG,Internacional,FINISHED,2.0,0.0
