@@ -115,3 +115,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 12/06/2025,23:00,12,Grêmio,Corinthians,FINISHED,1.0,1.0
 13/06/2025,00:30,12,São Paulo,Vasco,FINISHED,1.0,3.0
 13/06/2025,00:30,12,Atlético-MG,Internacional,FINISHED,2.0,0.0
+12/07/2025,19:30,13,Flamengo,São Paulo,FINISHED,2.0,0.0
+12/07/2025,19:30,13,Internacional,Vitória,FINISHED,1.0,0.0
+12/07/2025,21:30,13,Vasco,Botafogo,FINISHED,0.0,2.0
+13/07/2025,00:00,13,Bahia,Atlético-MG,FINISHED,2.0,1.0
