@@ -128,7 +128,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 13/07/2025,22:00,13,Corinthians,Bragantino,FINISHED,1.0,2.0
 13/07/2025,23:30,13,Cruzeiro,Grêmio,FINISHED,4.0,1.0
 13/07/2025,23:30,13,Fortaleza,Ceará,FINISHED,0.0,1.0
-14/07/2025,23:00,13,Juventude,Recife,TIMED,,
+14/07/2025,23:00,13,Juventude,Recife,FINISHED,2.0,0.0
+16/07/2025,00:00,14,Bahia,Internacional,POSTPONED,,
 16/07/2025,00:00,14,Juventude,Vasco da Gama,POSTPONED,,
 16/07/2025,22:00,14,Palmeiras,Mirassol,TIMED,,
 16/07/2025,22:30,14,Ceará,Corinthians,TIMED,,
@@ -136,7 +137,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 17/07/2025,00:30,14,Botafogo,Vitória,TIMED,,
 17/07/2025,00:30,14,Bragantino,São Paulo,TIMED,,
 17/07/2025,20:00,14,Mineiro,Recife,TIMED,,
-17/07/2025,20:00,14,Bahia,Internacional,TIMED,,
 17/07/2025,22:30,14,Fluminense,Cruzeiro,TIMED,,
 29/07/2025,23:30,14,Grêmio,Fortaleza,TIMED,,
 19/07/2025,19:00,15,Fortaleza,Bahia,TIMED,,
