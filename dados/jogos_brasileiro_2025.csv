@@ -137,7 +137,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 16/07/2025,23:00,14,Santos,Flamengo,FINISHED,1.0,0.0
 17/07/2025,00:30,14,Botafogo,Vitória,FINISHED,0.0,0.0
 17/07/2025,00:30,14,Bragantino,São Paulo,FINISHED,2.0,2.0
-17/07/2025,22:30,14,Fluminense,Cruzeiro,TIMED,,
+17/07/2025,22:30,14,Fluminense,Cruzeiro,FINISHED,0.0,2.0
 29/07/2025,23:30,14,Grêmio,Fortaleza,TIMED,,
 19/07/2025,19:00,15,Fortaleza,Bahia,TIMED,,
 19/07/2025,20:30,15,Vasco da Gama,Grêmio,TIMED,,
