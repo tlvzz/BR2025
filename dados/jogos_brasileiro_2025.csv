@@ -164,11 +164,11 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 26/07/2025,21:30,17,Fortaleza,Bragantino,FINISHED,3.0,1.0
 26/07/2025,21:30,17,Recife,Santos,FINISHED,2.0,2.0
 27/07/2025,00:00,17,Palmeiras,Grêmio,FINISHED,1.0,0.0
-27/07/2025,19:00,17,São Paulo,Fluminense,TIMED,,
-27/07/2025,19:00,17,Cruzeiro,Ceará,TIMED,,
-27/07/2025,21:30,17,Internacional,Vasco da Gama,TIMED,,
-27/07/2025,21:30,17,Bahia,Juventude,TIMED,,
-27/07/2025,23:30,17,Flamengo,Mineiro,TIMED,,
+27/07/2025,19:00,17,São Paulo,Fluminense,FINISHED,3.0,1.0
+27/07/2025,19:00,17,Cruzeiro,Ceará,FINISHED,1.0,2.0
+27/07/2025,21:30,17,Internacional,Vasco da Gama,FINISHED,1.0,1.0
+27/07/2025,21:30,17,Bahia,Juventude,FINISHED,3.0,0.0
+27/07/2025,23:30,17,Flamengo,Mineiro,IN_PLAY,,
 02/08/2025,19:00,18,Recife,Bahia,TIMED,,
 02/08/2025,21:30,18,Mirassol,Vasco da Gama,TIMED,,
 03/08/2025,00:00,18,Fluminense,Grêmio,TIMED,,
