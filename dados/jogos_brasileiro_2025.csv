@@ -169,9 +169,9 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 27/07/2025,21:30,17,Internacional,Vasco da Gama,FINISHED,1.0,1.0
 27/07/2025,21:30,17,Bahia,Juventude,FINISHED,3.0,0.0
 27/07/2025,23:30,17,Flamengo,Mineiro,FINISHED,1.0,0.0
-02/08/2025,19:00,18,Recife,Bahia,TIMED,,
-02/08/2025,21:30,18,Mirassol,Vasco da Gama,TIMED,,
-03/08/2025,00:00,18,Fluminense,Grêmio,TIMED,,
+02/08/2025,19:00,18,Recife,Bahia,FINISHED,0.0,0.0
+02/08/2025,21:30,18,Mirassol,Vasco da Gama,FINISHED,3.0,2.0
+03/08/2025,00:00,18,Fluminense,Grêmio,PAUSED,,
 03/08/2025,19:00,18,Botafogo,Cruzeiro,TIMED,,
 03/08/2025,19:00,18,Corinthians,Fortaleza,TIMED,,
 03/08/2025,21:30,18,Mineiro,Bragantino,TIMED,,
