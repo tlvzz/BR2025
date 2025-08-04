@@ -171,13 +171,13 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 27/07/2025,23:30,17,Flamengo,Mineiro,FINISHED,1.0,0.0
 02/08/2025,19:00,18,Recife,Bahia,FINISHED,0.0,0.0
 02/08/2025,21:30,18,Mirassol,Vasco da Gama,FINISHED,3.0,2.0
-03/08/2025,00:00,18,Fluminense,Grêmio,PAUSED,,
-03/08/2025,19:00,18,Botafogo,Cruzeiro,TIMED,,
-03/08/2025,19:00,18,Corinthians,Fortaleza,TIMED,,
-03/08/2025,21:30,18,Mineiro,Bragantino,TIMED,,
-03/08/2025,21:30,18,Ceará,Flamengo,TIMED,,
-03/08/2025,22:30,18,Vitória,Palmeiras,TIMED,,
-03/08/2025,23:30,18,Internacional,São Paulo,TIMED,,
+03/08/2025,00:00,18,Fluminense,Grêmio,FINISHED,1.0,0.0
+03/08/2025,19:00,18,Botafogo,Cruzeiro,FINISHED,0.0,2.0
+03/08/2025,19:00,18,Corinthians,Fortaleza,FINISHED,1.0,1.0
+03/08/2025,21:30,18,Mineiro,Bragantino,FINISHED,2.0,1.0
+03/08/2025,21:30,18,Ceará,Flamengo,FINISHED,1.0,1.0
+03/08/2025,22:30,18,Vitória,Palmeiras,FINISHED,2.0,2.0
+03/08/2025,23:30,18,Internacional,São Paulo,FINISHED,1.0,2.0
 04/08/2025,23:00,18,Santos,Juventude,TIMED,,
 09/08/2025,21:30,19,Flamengo,Mirassol,TIMED,,
 09/08/2025,21:30,19,São Paulo,Vitória,TIMED,,
