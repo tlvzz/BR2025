@@ -167,3 +167,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 03/08/2025,22:30,18,Vitória,Palmeiras,FINISHED,2.0,2.0
 03/08/2025,23:30,18,Internacional,São Paulo,FINISHED,1.0,2.0
 04/08/2025,23:00,18,Santos,Juventude,FINISHED,3.0,1.0
+09/08/2025,21:30,19,Flamengo,Mirassol,FINISHED,2.0,1.0
+09/08/2025,21:30,19,São Paulo,Vitória,FINISHED,2.0,0.0
+09/08/2025,21:30,19,R B Bragantino,Internacional,FINISHED,1.0,3.0
+09/08/2025,23:30,19,Fortaleza,Botafogo,FINISHED,0.0,5.0
+10/08/2025,00:00,19,Bahia,Fluminense,FINISHED,3.0,3.0
