@@ -189,11 +189,11 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 10/08/2025,21:30,19,Cruzeiro,Santos,FINISHED,1.0,2.0
 10/08/2025,23:30,19,Grêmio,Recife,FINISHED,0.0,1.0
 11/08/2025,23:00,19,Juventude,Corinthians,FINISHED,2.0,1.0
-16/08/2025,19:00,20,Fluminense,Fortaleza,TIMED,,
-16/08/2025,19:00,20,Ceará,Bragantino,TIMED,,
-16/08/2025,21:30,20,Vitória,Juventude,TIMED,,
-16/08/2025,21:30,20,Recife,São Paulo,TIMED,,
-17/08/2025,00:00,20,Corinthians,Bahia,TIMED,,
+16/08/2025,19:00,20,Fluminense,Fortaleza,FINISHED,2.0,1.0
+16/08/2025,19:00,20,Ceará,Bragantino,FINISHED,1.0,0.0
+16/08/2025,21:30,20,Vitória,Juventude,FINISHED,2.0,2.0
+16/08/2025,21:30,20,Recife,São Paulo,FINISHED,2.0,2.0
+17/08/2025,00:00,20,Corinthians,Bahia,FINISHED,1.0,2.0
 17/08/2025,19:00,20,Santos,Vasco da Gama,TIMED,,
 17/08/2025,19:00,20,Mineiro,Grêmio,TIMED,,
 17/08/2025,21:30,20,Internacional,Flamengo,TIMED,,
