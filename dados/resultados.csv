@@ -182,3 +182,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 16/08/2025,21:30,20,Vitória,Juventude,FINISHED,2.0,2.0
 16/08/2025,21:30,20,Sport,São Paulo,FINISHED,2.0,2.0
 17/08/2025,00:00,20,Corinthians,Bahia,FINISHED,1.0,2.0
+17/08/2025,19:00,20,Santos,Vasco,FINISHED,0.0,6.0
+17/08/2025,19:00,20,Atlético-MG,Grêmio,FINISHED,1.0,3.0
+17/08/2025,21:30,20,Internacional,Flamengo,FINISHED,1.0,3.0
