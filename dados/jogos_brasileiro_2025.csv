@@ -197,8 +197,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 17/08/2025,19:00,20,Santos,Vasco da Gama,FINISHED,0.0,6.0
 17/08/2025,19:00,20,Mineiro,Grêmio,FINISHED,1.0,3.0
 17/08/2025,21:30,20,Internacional,Flamengo,FINISHED,1.0,3.0
-17/08/2025,23:30,20,Botafogo,Palmeiras,IN_PLAY,,
-18/08/2025,23:00,20,Mirassol,Cruzeiro,TIMED,,
+17/08/2025,23:30,20,Botafogo,Palmeiras,FINISHED,0.0,1.0
+18/08/2025,23:00,20,Mirassol,Cruzeiro,IN_PLAY,,
 23/08/2025,19:00,21,Bragantino,Fluminense,TIMED,,
 23/08/2025,21:30,21,Cruzeiro,Internacional,TIMED,,
 24/08/2025,00:00,21,Grêmio,Ceará,TIMED,,
