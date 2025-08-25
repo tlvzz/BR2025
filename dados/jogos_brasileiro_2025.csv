@@ -201,12 +201,12 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 18/08/2025,23:00,20,Mirassol,Cruzeiro,FINISHED,1.0,1.0
 23/08/2025,19:00,21,Bragantino,Fluminense,FINISHED,4.0,2.0
 23/08/2025,21:30,21,Cruzeiro,Internacional,FINISHED,2.0,1.0
-24/08/2025,00:00,21,Grêmio,Ceará,PAUSED,,
-24/08/2025,19:00,21,Vasco da Gama,Corinthians,TIMED,,
-24/08/2025,19:00,21,Bahia,Santos,TIMED,,
-24/08/2025,21:30,21,Fortaleza,Mirassol,TIMED,,
-24/08/2025,21:30,21,Juventude,Botafogo,TIMED,,
-24/08/2025,23:30,21,São Paulo,Mineiro,TIMED,,
+24/08/2025,00:00,21,Grêmio,Ceará,FINISHED,0.0,0.0
+24/08/2025,19:00,21,Vasco da Gama,Corinthians,FINISHED,2.0,3.0
+24/08/2025,19:00,21,Bahia,Santos,FINISHED,2.0,0.0
+24/08/2025,21:30,21,Fortaleza,Mirassol,FINISHED,0.0,1.0
+24/08/2025,21:30,21,Juventude,Botafogo,FINISHED,1.0,3.0
+24/08/2025,23:30,21,São Paulo,Mineiro,FINISHED,2.0,0.0
 25/08/2025,22:00,21,Palmeiras,Recife,TIMED,,
 26/08/2025,00:00,21,Flamengo,Vitória,TIMED,,
 30/08/2025,19:00,22,Ceará,Juventude,TIMED,,
