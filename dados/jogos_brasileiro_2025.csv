@@ -110,7 +110,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 01/06/2025,23:30,11,Internacional,Fluminense,FINISHED,0.0,2.0
 31/05/2025,21:30,11,Bahia,São Paulo,FINISHED,2.0,1.0
 11/06/2025,00:00,12,Fluminense,Ceará,POSTPONED,,
-11/06/2025,00:00,12,Botafogo,Mirassol,POSTPONED,,
 11/06/2025,00:00,12,Palmeiras,Juventude,POSTPONED,,
 11/06/2025,00:00,12,Recife,Flamengo,POSTPONED,,
 12/06/2025,22:00,12,Bragantino,Bahia,FINISHED,0.0,3.0
@@ -119,6 +118,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 12/06/2025,23:00,12,Grêmio,Corinthians,FINISHED,1.0,1.0
 13/06/2025,00:30,12,São Paulo,Vasco da Gama,FINISHED,1.0,3.0
 13/06/2025,00:30,12,Mineiro,Internacional,FINISHED,2.0,0.0
+17/09/2025,22:30,12,Botafogo,Mirassol,TIMED,,
 12/07/2025,19:30,13,Flamengo,São Paulo,FINISHED,2.0,0.0
 12/07/2025,19:30,13,Internacional,Vitória,FINISHED,1.0,0.0
 12/07/2025,21:30,13,Vasco da Gama,Botafogo,FINISHED,0.0,2.0
@@ -149,9 +149,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 20/07/2025,20:30,15,Palmeiras,Mineiro,FINISHED,3.0,2.0
 20/07/2025,20:30,15,Recife,Botafogo,FINISHED,0.0,1.0
 20/07/2025,22:30,15,Flamengo,Fluminense,FINISHED,1.0,0.0
-23/07/2025,00:00,16,Vasco da Gama,Bahia,POSTPONED,,
 23/07/2025,00:00,16,Mineiro,Fortaleza,POSTPONED,,
-23/07/2025,00:00,16,Grêmio,Botafogo,POSTPONED,,
 23/07/2025,22:00,16,Fluminense,Palmeiras,FINISHED,1.0,2.0
 23/07/2025,22:00,16,Ceará,Mirassol,FINISHED,0.0,2.0
 23/07/2025,22:30,16,Corinthians,Cruzeiro,FINISHED,0.0,0.0
@@ -159,6 +157,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 24/07/2025,00:30,16,Bragantino,Flamengo,FINISHED,1.0,2.0
 24/07/2025,00:30,16,Vitória,Recife,FINISHED,2.0,2.0
 24/07/2025,22:00,16,Juventude,São Paulo,FINISHED,0.0,1.0
+24/09/2025,22:30,16,Vasco da Gama,Bahia,TIMED,,
+24/09/2025,22:30,16,Grêmio,Botafogo,TIMED,,
 26/07/2025,21:30,17,Botafogo,Corinthians,FINISHED,1.0,1.0
 26/07/2025,21:30,17,Mirassol,Vitória,FINISHED,1.0,1.0
 26/07/2025,21:30,17,Fortaleza,Bragantino,FINISHED,3.0,1.0
@@ -219,26 +219,26 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 31/08/2025,21:30,22,Vitória,Mineiro,TIMED,,
 31/08/2025,23:30,22,Internacional,Fortaleza,TIMED,,
 31/08/2025,23:30,22,Recife,Vasco da Gama,TIMED,,
-13/09/2025,00:00,23,Fluminense,Corinthians,SCHEDULED,,
-13/09/2025,00:00,23,Vasco da Gama,Ceará,SCHEDULED,,
-13/09/2025,00:00,23,Palmeiras,Internacional,SCHEDULED,,
-13/09/2025,00:00,23,São Paulo,Botafogo,SCHEDULED,,
-13/09/2025,00:00,23,Bragantino,Recife,SCHEDULED,,
-13/09/2025,00:00,23,Mineiro,Santos,SCHEDULED,,
-13/09/2025,00:00,23,Grêmio,Mirassol,SCHEDULED,,
-13/09/2025,00:00,23,Bahia,Cruzeiro,SCHEDULED,,
-13/09/2025,00:00,23,Fortaleza,Vitória,SCHEDULED,,
-13/09/2025,00:00,23,Juventude,Flamengo,SCHEDULED,,
+13/09/2025,19:00,23,Grêmio,Mirassol,TIMED,,
+13/09/2025,19:00,23,Fortaleza,Vitória,TIMED,,
+13/09/2025,21:30,23,Palmeiras,Internacional,TIMED,,
+14/09/2025,00:00,23,Fluminense,Corinthians,TIMED,,
+14/09/2025,14:00,23,Bragantino,Recife,TIMED,,
+14/09/2025,19:00,23,Mineiro,Santos,TIMED,,
+14/09/2025,19:00,23,Juventude,Flamengo,TIMED,,
+14/09/2025,20:30,23,São Paulo,Botafogo,TIMED,,
+14/09/2025,23:30,23,Vasco da Gama,Ceará,TIMED,,
+15/09/2025,23:00,23,Bahia,Cruzeiro,TIMED,,
 20/09/2025,00:00,24,Flamengo,Vasco da Gama,SCHEDULED,,
-20/09/2025,00:00,24,Botafogo,Mineiro,SCHEDULED,,
-20/09/2025,00:00,24,Palmeiras,Fortaleza,SCHEDULED,,
 20/09/2025,00:00,24,Santos,São Paulo,SCHEDULED,,
 20/09/2025,00:00,24,Mirassol,Juventude,SCHEDULED,,
 20/09/2025,00:00,24,Cruzeiro,Bragantino,SCHEDULED,,
 20/09/2025,00:00,24,Internacional,Grêmio,SCHEDULED,,
-20/09/2025,00:00,24,Vitória,Fluminense,SCHEDULED,,
-20/09/2025,00:00,24,Ceará,Bahia,SCHEDULED,,
 20/09/2025,00:00,24,Recife,Corinthians,SCHEDULED,,
+20/09/2025,19:00,24,Vitória,Fluminense,TIMED,,
+20/09/2025,21:30,24,Botafogo,Mineiro,TIMED,,
+20/09/2025,21:30,24,Ceará,Bahia,TIMED,,
+21/09/2025,00:00,24,Palmeiras,Fortaleza,TIMED,,
 27/09/2025,00:00,25,Fluminense,Botafogo,SCHEDULED,,
 27/09/2025,00:00,25,Vasco da Gama,Cruzeiro,SCHEDULED,,
 27/09/2025,00:00,25,Corinthians,Flamengo,SCHEDULED,,
