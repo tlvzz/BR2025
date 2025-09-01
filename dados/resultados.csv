@@ -201,3 +201,10 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 30/08/2025,19:00,22,Ceará,Juventude,FINISHED,0.0,1.0
 30/08/2025,21:30,22,Botafogo,R B Bragantino,FINISHED,4.0,1.0
 31/08/2025,00:00,22,Cruzeiro,São Paulo,FINISHED,1.0,0.0
+31/08/2025,19:00,22,Flamengo,Grêmio,FINISHED,1.0,1.0
+31/08/2025,19:00,22,Santos,Fluminense,FINISHED,0.0,0.0
+31/08/2025,21:30,22,Corinthians,Palmeiras,FINISHED,1.0,1.0
+31/08/2025,21:30,22,Mirassol,Bahia,FINISHED,5.0,1.0
+31/08/2025,21:30,22,Vitória,Atlético-MG,FINISHED,1.0,0.0
+31/08/2025,23:30,22,Internacional,Fortaleza,FINISHED,2.0,1.0
+31/08/2025,23:30,22,Sport,Vasco,FINISHED,2.0,3.0
