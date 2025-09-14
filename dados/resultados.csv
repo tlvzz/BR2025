@@ -208,3 +208,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 31/08/2025,21:30,22,Vitória,Atlético-MG,FINISHED,1.0,0.0
 31/08/2025,23:30,22,Internacional,Fortaleza,FINISHED,2.0,1.0
 31/08/2025,23:30,22,Sport,Vasco,FINISHED,2.0,3.0
+13/09/2025,19:00,23,Grêmio,Mirassol,FINISHED,0.0,1.0
+13/09/2025,19:00,23,Fortaleza,Vitória,FINISHED,2.0,0.0
+13/09/2025,21:30,23,Palmeiras,Internacional,FINISHED,4.0,1.0
+14/09/2025,00:00,23,Fluminense,Corinthians,FINISHED,0.0,1.0
