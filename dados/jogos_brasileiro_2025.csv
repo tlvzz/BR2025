@@ -223,11 +223,11 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 13/09/2025,19:00,23,Fortaleza,Vitória,FINISHED,2.0,0.0
 13/09/2025,21:30,23,Palmeiras,Internacional,FINISHED,4.0,1.0
 14/09/2025,00:00,23,Fluminense,Corinthians,FINISHED,0.0,1.0
-14/09/2025,14:00,23,Bragantino,Recife,TIMED,,
-14/09/2025,19:00,23,Mineiro,Santos,TIMED,,
-14/09/2025,19:00,23,Juventude,Flamengo,TIMED,,
-14/09/2025,20:30,23,São Paulo,Botafogo,TIMED,,
-14/09/2025,23:30,23,Vasco da Gama,Ceará,TIMED,,
+14/09/2025,14:00,23,Bragantino,Recife,FINISHED,1.0,1.0
+14/09/2025,19:00,23,Mineiro,Santos,FINISHED,1.0,1.0
+14/09/2025,19:00,23,Juventude,Flamengo,FINISHED,0.0,2.0
+14/09/2025,20:30,23,São Paulo,Botafogo,FINISHED,1.0,0.0
+14/09/2025,23:30,23,Vasco da Gama,Ceará,FINISHED,2.0,2.0
 15/09/2025,23:00,23,Bahia,Cruzeiro,TIMED,,
 20/09/2025,19:00,24,Vitória,Fluminense,TIMED,,
 20/09/2025,21:30,24,Botafogo,Mineiro,TIMED,,
