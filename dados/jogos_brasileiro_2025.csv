@@ -229,10 +229,10 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 14/09/2025,20:30,23,São Paulo,Botafogo,FINISHED,1.0,0.0
 14/09/2025,23:30,23,Vasco da Gama,Ceará,FINISHED,2.0,2.0
 15/09/2025,23:00,23,Bahia,Cruzeiro,FINISHED,1.0,2.0
-20/09/2025,19:00,24,Vitória,Fluminense,TIMED,,
-20/09/2025,21:30,24,Botafogo,Mineiro,TIMED,,
-20/09/2025,21:30,24,Ceará,Bahia,TIMED,,
-21/09/2025,00:00,24,Palmeiras,Fortaleza,TIMED,,
+20/09/2025,19:00,24,Vitória,Fluminense,FINISHED,0.0,1.0
+20/09/2025,21:30,24,Botafogo,Mineiro,FINISHED,1.0,0.0
+20/09/2025,21:30,24,Ceará,Bahia,FINISHED,1.0,1.0
+21/09/2025,00:00,24,Palmeiras,Fortaleza,FINISHED,4.0,1.0
 21/09/2025,19:00,24,Mirassol,Juventude,TIMED,,
 21/09/2025,20:30,24,Flamengo,Vasco da Gama,TIMED,,
 21/09/2025,20:30,24,Internacional,Grêmio,TIMED,,
