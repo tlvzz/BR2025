@@ -231,3 +231,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 21/09/2025,20:30,24,Sport,Corinthians,FINISHED,1.0,0.0
 21/09/2025,23:30,24,Santos,São Paulo,FINISHED,1.0,0.0
 21/09/2025,23:30,24,Cruzeiro,R B Bragantino,FINISHED,2.0,1.0
+27/09/2025,19:00,25,Fortaleza,Sport,FINISHED,1.0,0.0
+27/09/2025,21:30,25,Vasco,Cruzeiro,FINISHED,2.0,0.0
+27/09/2025,21:30,25,Juventude,Internacional,FINISHED,1.0,1.0
+28/09/2025,00:00,25,Atlético-MG,Mirassol,FINISHED,1.0,0.0
