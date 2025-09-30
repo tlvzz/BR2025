@@ -248,7 +248,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 28/09/2025,19:00,25,Bahia,Palmeiras,FINISHED,1.0,0.0
 28/09/2025,21:30,25,Bragantino,Santos,FINISHED,2.0,2.0
 28/09/2025,23:30,25,Corinthians,Flamengo,FINISHED,1.0,2.0
-29/09/2025,23:00,25,São Paulo,Ceará,TIMED,,
+29/09/2025,23:00,25,São Paulo,Ceará,FINISHED,0.0,1.0
 01/10/2025,00:30,26,Mineiro,Juventude,TIMED,,
 01/10/2025,22:00,26,Palmeiras,Vasco da Gama,TIMED,,
 01/10/2025,22:00,26,Mirassol,Bragantino,TIMED,,
