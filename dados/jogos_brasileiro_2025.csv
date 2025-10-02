@@ -250,12 +250,12 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 28/09/2025,23:30,25,Corinthians,Flamengo,FINISHED,1.0,2.0
 29/09/2025,23:00,25,São Paulo,Ceará,FINISHED,0.0,1.0
 01/10/2025,00:30,26,Mineiro,Juventude,FINISHED,0.0,0.0
-01/10/2025,22:00,26,Palmeiras,Vasco da Gama,TIMED,,
-01/10/2025,22:00,26,Mirassol,Bragantino,TIMED,,
-01/10/2025,22:00,26,Recife,Fluminense,TIMED,,
-01/10/2025,22:30,26,Internacional,Corinthians,TIMED,,
-02/10/2025,00:30,26,Botafogo,Bahia,TIMED,,
-02/10/2025,00:30,26,Santos,Grêmio,TIMED,,
+01/10/2025,22:00,26,Palmeiras,Vasco da Gama,FINISHED,3.0,0.0
+01/10/2025,22:00,26,Mirassol,Bragantino,FINISHED,1.0,1.0
+01/10/2025,22:00,26,Recife,Fluminense,FINISHED,2.0,2.0
+01/10/2025,22:30,26,Internacional,Corinthians,FINISHED,1.0,1.0
+02/10/2025,00:30,26,Botafogo,Bahia,FINISHED,2.0,1.0
+02/10/2025,00:30,26,Santos,Grêmio,FINISHED,1.0,1.0
 02/10/2025,22:00,26,Vitória,Ceará,TIMED,,
 02/10/2025,22:30,26,Fortaleza,São Paulo,TIMED,,
 02/10/2025,23:30,26,Flamengo,Cruzeiro,TIMED,,
