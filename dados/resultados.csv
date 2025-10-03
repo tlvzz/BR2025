@@ -248,3 +248,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 01/10/2025,22:30,26,Internacional,Corinthians,FINISHED,1.0,1.0
 02/10/2025,00:30,26,Botafogo,Bahia,FINISHED,2.0,1.0
 02/10/2025,00:30,26,Santos,Grêmio,FINISHED,1.0,1.0
+02/10/2025,22:00,26,Vitória,Ceará,FINISHED,1.0,0.0
+02/10/2025,22:30,26,Fortaleza,São Paulo,FINISHED,0.0,2.0
+02/10/2025,23:30,26,Flamengo,Cruzeiro,FINISHED,0.0,0.0
