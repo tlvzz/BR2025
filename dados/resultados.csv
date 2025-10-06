@@ -255,3 +255,9 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 04/10/2025,21:30,27,R B Bragantino,Grêmio,FINISHED,1.0,0.0
 04/10/2025,21:30,27,Internacional,Botafogo,FINISHED,2.0,0.0
 05/10/2025,00:00,27,Corinthians,Mirassol,FINISHED,3.0,0.0
+05/10/2025,19:00,27,Vasco,Vitória,FINISHED,4.0,3.0
+05/10/2025,19:00,27,São Paulo,Palmeiras,FINISHED,2.0,3.0
+05/10/2025,21:30,27,Bahia,Flamengo,FINISHED,1.0,0.0
+05/10/2025,21:30,27,Juventude,Fortaleza,FINISHED,1.0,2.0
+05/10/2025,23:30,27,Cruzeiro,Sport,FINISHED,1.0,1.0
+05/10/2025,23:30,27,Ceará,Santos,FINISHED,3.0,0.0
