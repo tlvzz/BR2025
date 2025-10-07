@@ -109,7 +109,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 01/06/2025,22:30,11,Cruzeiro,Palmeiras,FINISHED,2.0,1.0
 01/06/2025,23:30,11,Internacional,Fluminense,FINISHED,0.0,2.0
 31/05/2025,21:30,11,Bahia,São Paulo,FINISHED,2.0,1.0
-11/06/2025,00:00,12,Fluminense,Ceará,POSTPONED,,
 11/06/2025,00:00,12,Recife,Flamengo,POSTPONED,,
 11/10/2025,22:00,12,Palmeiras,Juventude,TIMED,,
 12/06/2025,22:00,12,Bragantino,Bahia,FINISHED,0.0,3.0
@@ -119,6 +118,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 13/06/2025,00:30,12,São Paulo,Vasco da Gama,FINISHED,1.0,3.0
 13/06/2025,00:30,12,Mineiro,Internacional,FINISHED,2.0,0.0
 17/09/2025,22:30,12,Botafogo,Mirassol,FINISHED,3.0,3.0
+29/10/2025,22:00,12,Fluminense,Ceará,TIMED,,
 09/10/2025,00:00,13,Mirassol,Fluminense,TIMED,,
 12/07/2025,19:30,13,Flamengo,São Paulo,FINISHED,2.0,0.0
 12/07/2025,19:30,13,Internacional,Vitória,FINISHED,1.0,0.0
