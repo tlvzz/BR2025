@@ -116,6 +116,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 13/06/2025,00:30,12,São Paulo,Vasco,FINISHED,1.0,3.0
 13/06/2025,00:30,12,Atlético-MG,Internacional,FINISHED,2.0,0.0
 17/09/2025,22:30,12,Botafogo,Mirassol,FINISHED,3.0,3.0
+09/10/2025,00:00,13,Mirassol,Fluminense,FINISHED,2.0,1.0
 12/07/2025,19:30,13,Flamengo,São Paulo,FINISHED,2.0,0.0
 12/07/2025,19:30,13,Internacional,Vitória,FINISHED,1.0,0.0
 12/07/2025,21:30,13,Vasco,Botafogo,FINISHED,0.0,2.0
@@ -124,6 +125,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 13/07/2025,23:30,13,Cruzeiro,Grêmio,FINISHED,4.0,1.0
 13/07/2025,23:30,13,Fortaleza,Ceará,FINISHED,0.0,1.0
 14/07/2025,23:00,13,Juventude,Sport,FINISHED,2.0,0.0
+08/10/2025,22:00,14,Atlético-MG,Sport,FINISHED,3.0,1.0
 16/07/2025,22:00,14,Palmeiras,Mirassol,FINISHED,1.0,1.0
 16/07/2025,22:30,14,Ceará,Corinthians,FINISHED,0.0,1.0
 16/07/2025,23:00,14,Santos,Flamengo,FINISHED,1.0,0.0
