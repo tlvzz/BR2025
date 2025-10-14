@@ -109,7 +109,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 01/06/2025,22:30,11,Cruzeiro,Palmeiras,FINISHED,2.0,1.0
 01/06/2025,23:30,11,Internacional,Fluminense,FINISHED,0.0,2.0
 31/05/2025,21:30,11,Bahia,São Paulo,FINISHED,2.0,1.0
-11/06/2025,00:00,12,Recife,Flamengo,POSTPONED,,
 11/10/2025,22:00,12,Palmeiras,Juventude,FINISHED,4.0,1.0
 12/06/2025,22:00,12,Bragantino,Bahia,FINISHED,0.0,3.0
 12/06/2025,22:00,12,Vitória,Cruzeiro,FINISHED,0.0,0.0
@@ -117,18 +116,19 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 12/06/2025,23:00,12,Grêmio,Corinthians,FINISHED,1.0,1.0
 13/06/2025,00:30,12,São Paulo,Vasco da Gama,FINISHED,1.0,3.0
 13/06/2025,00:30,12,Mineiro,Internacional,FINISHED,2.0,0.0
+13/11/2025,23:30,12,Recife,Flamengo,TIMED,,
 17/09/2025,22:30,12,Botafogo,Mirassol,FINISHED,3.0,3.0
 29/10/2025,22:00,12,Fluminense,Ceará,TIMED,,
 09/10/2025,00:00,13,Mirassol,Fluminense,FINISHED,2.0,1.0
 12/07/2025,19:30,13,Flamengo,São Paulo,FINISHED,2.0,0.0
 12/07/2025,19:30,13,Internacional,Vitória,FINISHED,1.0,0.0
 12/07/2025,21:30,13,Vasco da Gama,Botafogo,FINISHED,0.0,2.0
-13/07/2025,00:00,13,Santos,Palmeiras,POSTPONED,,
 13/07/2025,00:00,13,Bahia,Mineiro,FINISHED,2.0,1.0
 13/07/2025,22:00,13,Corinthians,Bragantino,FINISHED,1.0,2.0
 13/07/2025,23:30,13,Cruzeiro,Grêmio,FINISHED,4.0,1.0
 13/07/2025,23:30,13,Fortaleza,Ceará,FINISHED,0.0,1.0
 14/07/2025,23:00,13,Juventude,Recife,FINISHED,2.0,0.0
+16/11/2025,00:00,13,Santos,Palmeiras,TIMED,,
 08/10/2025,22:00,14,Mineiro,Recife,FINISHED,3.0,1.0
 16/07/2025,22:00,14,Palmeiras,Mirassol,FINISHED,1.0,1.0
 16/07/2025,22:30,14,Ceará,Corinthians,FINISHED,0.0,1.0
@@ -280,11 +280,11 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 17/10/2025,00:30,28,Fluminense,Juventude,TIMED,,
 17/10/2025,00:30,28,Vitória,Bahia,TIMED,,
 18/10/2025,21:30,29,Corinthians,Mineiro,TIMED,,
-18/10/2025,21:30,29,Internacional,Recife,TIMED,,
 19/10/2025,00:00,29,Cruzeiro,Fortaleza,TIMED,,
 19/10/2025,19:00,29,Flamengo,Palmeiras,TIMED,,
 19/10/2025,19:00,29,Mirassol,São Paulo,TIMED,,
 19/10/2025,19:00,29,Ceará,Botafogo,TIMED,,
+19/10/2025,21:30,29,Internacional,Recife,TIMED,,
 19/10/2025,23:30,29,Bahia,Grêmio,TIMED,,
 20/10/2025,22:00,29,Juventude,Bragantino,TIMED,,
 20/10/2025,22:30,29,Vasco da Gama,Fluminense,TIMED,,
