@@ -269,13 +269,13 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 05/10/2025,21:30,27,Juventude,Fortaleza,FINISHED,1.0,2.0
 05/10/2025,23:30,27,Cruzeiro,Recife,FINISHED,1.0,1.0
 05/10/2025,23:30,27,Ceará,Santos,FINISHED,3.0,0.0
-15/10/2025,22:00,28,Palmeiras,Bragantino,TIMED,,
-15/10/2025,22:30,28,Botafogo,Flamengo,TIMED,,
-15/10/2025,23:00,28,Mirassol,Internacional,TIMED,,
-15/10/2025,23:00,28,Recife,Ceará,TIMED,,
-16/10/2025,00:30,28,Santos,Corinthians,TIMED,,
-16/10/2025,00:30,28,Mineiro,Cruzeiro,TIMED,,
-16/10/2025,00:30,28,Fortaleza,Vasco da Gama,TIMED,,
+15/10/2025,22:00,28,Palmeiras,Bragantino,FINISHED,5.0,1.0
+15/10/2025,22:30,28,Botafogo,Flamengo,FINISHED,0.0,3.0
+15/10/2025,23:00,28,Mirassol,Internacional,FINISHED,3.0,1.0
+15/10/2025,23:00,28,Recife,Ceará,FINISHED,1.0,1.0
+16/10/2025,00:30,28,Santos,Corinthians,FINISHED,3.0,1.0
+16/10/2025,00:30,28,Mineiro,Cruzeiro,FINISHED,1.0,1.0
+16/10/2025,00:30,28,Fortaleza,Vasco da Gama,FINISHED,0.0,2.0
 16/10/2025,22:00,28,Grêmio,São Paulo,TIMED,,
 17/10/2025,00:30,28,Fluminense,Juventude,TIMED,,
 17/10/2025,00:30,28,Vitória,Bahia,TIMED,,
