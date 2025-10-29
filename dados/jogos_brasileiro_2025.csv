@@ -299,6 +299,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 26/10/2025,19:00,30,Grêmio,Juventude,FINISHED,3.0,1.0
 26/10/2025,21:30,30,Bragantino,Vasco da Gama,FINISHED,0.0,3.0
 26/10/2025,23:30,30,Palmeiras,Cruzeiro,FINISHED,0.0,0.0
+01/11/2025,19:00,31,Santos,Fortaleza,TIMED,,
 01/11/2025,19:00,31,Cruzeiro,Vitória,TIMED,,
 01/11/2025,21:00,31,Mirassol,Botafogo,TIMED,,
 02/11/2025,00:00,31,Flamengo,Recife,TIMED,,
@@ -308,7 +309,6 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 02/11/2025,21:30,31,Internacional,Mineiro,TIMED,,
 02/11/2025,21:30,31,Juventude,Palmeiras,TIMED,,
 02/11/2025,23:30,31,Vasco da Gama,São Paulo,TIMED,,
-03/11/2025,23:00,31,Santos,Fortaleza,TIMED,,
 05/11/2025,22:00,32,Bragantino,Corinthians,TIMED,,
 05/11/2025,22:00,32,Vitória,Internacional,TIMED,,
 05/11/2025,22:00,32,Recife,Juventude,TIMED,,
