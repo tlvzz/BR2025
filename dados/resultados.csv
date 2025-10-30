@@ -117,6 +117,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 13/06/2025,00:30,12,São Paulo,Vasco,FINISHED,1.0,3.0
 13/06/2025,00:30,12,Atlético-MG,Internacional,FINISHED,2.0,0.0
 17/09/2025,22:30,12,Botafogo,Mirassol,FINISHED,3.0,3.0
+29/10/2025,22:00,12,Fluminense,Ceará,FINISHED,1.0,0.0
 09/10/2025,00:00,13,Mirassol,Fluminense,FINISHED,2.0,1.0
 12/07/2025,19:30,13,Flamengo,São Paulo,FINISHED,2.0,0.0
 12/07/2025,19:30,13,Internacional,Vitória,FINISHED,1.0,0.0
