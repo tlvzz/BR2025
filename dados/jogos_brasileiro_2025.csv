@@ -303,12 +303,12 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 01/11/2025,19:00,31,Cruzeiro,Vitória,FINISHED,3.0,1.0
 01/11/2025,21:00,31,Mirassol,Botafogo,FINISHED,0.0,0.0
 02/11/2025,00:00,31,Flamengo,Recife,FINISHED,3.0,0.0
-02/11/2025,19:00,31,Corinthians,Grêmio,TIMED,,
-02/11/2025,19:00,31,Bahia,Bragantino,TIMED,,
-02/11/2025,19:00,31,Ceará,Fluminense,TIMED,,
-02/11/2025,21:30,31,Internacional,Mineiro,TIMED,,
-02/11/2025,21:30,31,Juventude,Palmeiras,TIMED,,
-02/11/2025,23:30,31,Vasco da Gama,São Paulo,TIMED,,
+02/11/2025,19:00,31,Corinthians,Grêmio,FINISHED,2.0,0.0
+02/11/2025,19:00,31,Bahia,Bragantino,FINISHED,2.0,1.0
+02/11/2025,19:00,31,Ceará,Fluminense,FINISHED,2.0,0.0
+02/11/2025,21:30,31,Internacional,Mineiro,FINISHED,0.0,0.0
+02/11/2025,21:30,31,Juventude,Palmeiras,FINISHED,0.0,2.0
+02/11/2025,23:30,31,Vasco da Gama,São Paulo,FINISHED,0.0,2.0
 05/11/2025,22:00,32,Bragantino,Corinthians,TIMED,,
 05/11/2025,22:00,32,Vitória,Internacional,TIMED,,
 05/11/2025,22:00,32,Recife,Juventude,TIMED,,
