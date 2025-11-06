@@ -306,3 +306,10 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 02/11/2025,21:30,31,Internacional,Atlético-MG,FINISHED,0.0,0.0
 02/11/2025,21:30,31,Juventude,Palmeiras,FINISHED,0.0,2.0
 02/11/2025,23:30,31,Vasco,São Paulo,FINISHED,0.0,2.0
+05/11/2025,22:00,32,R B Bragantino,Corinthians,FINISHED,2.0,1.0
+05/11/2025,22:00,32,Vitória,Internacional,FINISHED,1.0,0.0
+05/11/2025,22:00,32,Sport,Juventude,FINISHED,0.0,2.0
+05/11/2025,22:30,32,Botafogo,Vasco,FINISHED,3.0,0.0
+05/11/2025,23:00,32,Atlético-MG,Bahia,FINISHED,3.0,0.0
+05/11/2025,23:00,32,Grêmio,Cruzeiro,FINISHED,0.0,1.0
+06/11/2025,00:30,32,São Paulo,Flamengo,FINISHED,2.0,2.0
