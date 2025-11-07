@@ -149,7 +149,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 20/07/2025,20:30,15,Palmeiras,Mineiro,FINISHED,3.0,2.0
 20/07/2025,20:30,15,Recife,Botafogo,FINISHED,0.0,1.0
 20/07/2025,22:30,15,Flamengo,Fluminense,FINISHED,1.0,0.0
-23/07/2025,00:00,16,Mineiro,Fortaleza,POSTPONED,,
+12/11/2025,23:30,16,Mineiro,Fortaleza,TIMED,,
 23/07/2025,22:00,16,Fluminense,Palmeiras,FINISHED,1.0,2.0
 23/07/2025,22:00,16,Ceará,Mirassol,FINISHED,0.0,2.0
 23/07/2025,22:30,16,Corinthians,Cruzeiro,FINISHED,0.0,0.0
@@ -316,9 +316,9 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 05/11/2025,23:00,32,Mineiro,Bahia,FINISHED,3.0,0.0
 05/11/2025,23:00,32,Grêmio,Cruzeiro,FINISHED,0.0,1.0
 06/11/2025,00:30,32,São Paulo,Flamengo,FINISHED,2.0,2.0
-06/11/2025,22:30,32,Fluminense,Mirassol,TIMED,,
-06/11/2025,23:00,32,Ceará,Fortaleza,TIMED,,
-07/11/2025,00:30,32,Palmeiras,Santos,TIMED,,
+06/11/2025,22:30,32,Fluminense,Mirassol,FINISHED,1.0,0.0
+06/11/2025,23:00,32,Ceará,Fortaleza,FINISHED,1.0,1.0
+07/11/2025,00:30,32,Palmeiras,Santos,FINISHED,1.0,0.0
 08/11/2025,19:00,33,Recife,Mineiro,TIMED,,
 08/11/2025,21:00,33,Vasco da Gama,Juventude,TIMED,,
 08/11/2025,21:30,33,Internacional,Bahia,TIMED,,
