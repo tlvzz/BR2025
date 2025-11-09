@@ -319,10 +319,10 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 06/11/2025,22:30,32,Fluminense,Mirassol,FINISHED,1.0,0.0
 06/11/2025,23:00,32,Ceará,Fortaleza,FINISHED,1.0,1.0
 07/11/2025,00:30,32,Palmeiras,Santos,FINISHED,2.0,0.0
-08/11/2025,19:00,33,Recife,Mineiro,TIMED,,
-08/11/2025,21:00,33,Vasco da Gama,Juventude,TIMED,,
-08/11/2025,21:30,33,Internacional,Bahia,TIMED,,
-09/11/2025,00:00,33,São Paulo,Bragantino,TIMED,,
+08/11/2025,19:00,33,Recife,Mineiro,FINISHED,2.0,4.0
+08/11/2025,21:00,33,Vasco da Gama,Juventude,FINISHED,1.0,3.0
+08/11/2025,21:30,33,Internacional,Bahia,FINISHED,2.0,2.0
+09/11/2025,00:00,33,São Paulo,Bragantino,FINISHED,0.0,1.0
 09/11/2025,19:00,33,Corinthians,Ceará,TIMED,,
 09/11/2025,19:00,33,Cruzeiro,Fluminense,TIMED,,
 09/11/2025,19:00,33,Vitória,Botafogo,TIMED,,
