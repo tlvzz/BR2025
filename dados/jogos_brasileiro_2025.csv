@@ -323,12 +323,12 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 08/11/2025,21:00,33,Vasco da Gama,Juventude,FINISHED,1.0,3.0
 08/11/2025,21:30,33,Internacional,Bahia,FINISHED,2.0,2.0
 09/11/2025,00:00,33,São Paulo,Bragantino,FINISHED,0.0,1.0
-09/11/2025,19:00,33,Corinthians,Ceará,TIMED,,
-09/11/2025,19:00,33,Cruzeiro,Fluminense,TIMED,,
-09/11/2025,19:00,33,Vitória,Botafogo,TIMED,,
-09/11/2025,21:30,33,Flamengo,Santos,TIMED,,
-09/11/2025,23:30,33,Mirassol,Palmeiras,TIMED,,
-09/11/2025,23:30,33,Fortaleza,Grêmio,TIMED,,
+09/11/2025,19:00,33,Corinthians,Ceará,FINISHED,0.0,1.0
+09/11/2025,19:00,33,Cruzeiro,Fluminense,FINISHED,0.0,0.0
+09/11/2025,19:00,33,Vitória,Botafogo,FINISHED,0.0,0.0
+09/11/2025,21:30,33,Flamengo,Santos,FINISHED,3.0,2.0
+09/11/2025,23:30,33,Mirassol,Palmeiras,FINISHED,2.0,1.0
+09/11/2025,23:30,33,Fortaleza,Grêmio,FINISHED,2.0,2.0
 03/12/2025,21:00,34,Mineiro,Palmeiras,TIMED,,
 18/11/2025,23:30,34,Botafogo,Recife,TIMED,,
 19/11/2025,00:00,34,Bragantino,Vitória,POSTPONED,,
