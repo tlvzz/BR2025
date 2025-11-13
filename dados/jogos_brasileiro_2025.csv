@@ -149,7 +149,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 20/07/2025,20:30,15,Palmeiras,Mineiro,FINISHED,3.0,2.0
 20/07/2025,20:30,15,Recife,Botafogo,FINISHED,0.0,1.0
 20/07/2025,22:30,15,Flamengo,Fluminense,FINISHED,1.0,0.0
-12/11/2025,23:30,16,Mineiro,Fortaleza,TIMED,,
+12/11/2025,23:30,16,Mineiro,Fortaleza,FINISHED,3.0,3.0
 23/07/2025,22:00,16,Fluminense,Palmeiras,FINISHED,1.0,2.0
 23/07/2025,22:00,16,Ceará,Mirassol,FINISHED,0.0,2.0
 23/07/2025,22:30,16,Corinthians,Cruzeiro,FINISHED,0.0,0.0
@@ -361,13 +361,13 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 30/11/2025,19:00,36,Corinthians,Botafogo,TIMED,,
 03/12/2025,00:00,37,Vasco da Gama,Mirassol,SCHEDULED,,
 03/12/2025,00:00,37,São Paulo,Internacional,SCHEDULED,,
-03/12/2025,00:00,37,Bragantino,Mineiro,SCHEDULED,,
 03/12/2025,00:00,37,Cruzeiro,Botafogo,SCHEDULED,,
 03/12/2025,00:00,37,Grêmio,Fluminense,SCHEDULED,,
 03/12/2025,00:00,37,Bahia,Recife,SCHEDULED,,
 03/12/2025,00:00,37,Fortaleza,Corinthians,SCHEDULED,,
 03/12/2025,00:00,37,Juventude,Santos,SCHEDULED,,
 03/12/2025,00:00,37,Flamengo,Ceará,SCHEDULED,,
+16/11/2025,22:00,37,Bragantino,Mineiro,TIMED,,
 19/11/2025,22:30,37,Palmeiras,Vitória,TIMED,,
 07/12/2025,00:00,38,Fluminense,Bahia,SCHEDULED,,
 07/12/2025,00:00,38,Botafogo,Fortaleza,SCHEDULED,,
