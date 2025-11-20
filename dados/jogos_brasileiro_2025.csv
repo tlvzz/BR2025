@@ -329,12 +329,12 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 09/11/2025,21:30,33,Flamengo,Santos,FINISHED,3.0,2.0
 09/11/2025,23:30,33,Mirassol,Palmeiras,FINISHED,2.0,1.0
 09/11/2025,23:30,33,Fortaleza,Grêmio,FINISHED,2.0,2.0
-03/12/2025,21:00,34,Mineiro,Palmeiras,TIMED,,
+04/12/2025,00:30,34,Mineiro,Palmeiras,TIMED,,
 18/11/2025,23:30,34,Botafogo,Recife,FINISHED,3.0,2.0
 19/11/2025,00:00,34,Bragantino,Vitória,POSTPONED,,
-20/11/2025,00:30,34,Fluminense,Flamengo,TIMED,,
-20/11/2025,00:30,34,Santos,Mirassol,TIMED,,
-20/11/2025,00:30,34,Grêmio,Vasco da Gama,TIMED,,
+20/11/2025,00:30,34,Fluminense,Flamengo,FINISHED,2.0,1.0
+20/11/2025,00:30,34,Santos,Mirassol,FINISHED,1.0,1.0
+20/11/2025,00:30,34,Grêmio,Vasco da Gama,FINISHED,2.0,0.0
 20/11/2025,19:00,34,Juventude,Cruzeiro,TIMED,,
 20/11/2025,21:00,34,Bahia,Fortaleza,TIMED,,
 20/11/2025,22:30,34,Corinthians,São Paulo,TIMED,,
@@ -359,23 +359,23 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 29/11/2025,19:00,36,Vitória,Mirassol,TIMED,,
 29/11/2025,23:30,36,Ceará,Cruzeiro,TIMED,,
 30/11/2025,19:00,36,Corinthians,Botafogo,TIMED,,
-03/12/2025,00:00,37,Vasco da Gama,Mirassol,SCHEDULED,,
-03/12/2025,00:00,37,São Paulo,Internacional,SCHEDULED,,
-03/12/2025,00:00,37,Cruzeiro,Botafogo,SCHEDULED,,
-03/12/2025,00:00,37,Grêmio,Fluminense,SCHEDULED,,
+02/12/2025,22:00,37,Vasco da Gama,Mirassol,TIMED,,
 03/12/2025,00:00,37,Bahia,Recife,SCHEDULED,,
-03/12/2025,00:00,37,Fortaleza,Corinthians,SCHEDULED,,
-03/12/2025,00:00,37,Juventude,Santos,SCHEDULED,,
-03/12/2025,00:00,37,Flamengo,Ceará,SCHEDULED,,
+03/12/2025,00:30,37,Grêmio,Fluminense,TIMED,,
+03/12/2025,22:00,37,Fortaleza,Corinthians,TIMED,,
+03/12/2025,22:30,37,Juventude,Santos,TIMED,,
+03/12/2025,23:00,37,São Paulo,Internacional,TIMED,,
+04/12/2025,00:30,37,Flamengo,Ceará,TIMED,,
+04/12/2025,22:30,37,Cruzeiro,Botafogo,TIMED,,
 16/11/2025,22:00,37,Bragantino,Mineiro,FINISHED,2.0,0.0
-19/11/2025,22:30,37,Palmeiras,Vitória,TIMED,,
-07/12/2025,00:00,38,Fluminense,Bahia,SCHEDULED,,
-07/12/2025,00:00,38,Botafogo,Fortaleza,SCHEDULED,,
-07/12/2025,00:00,38,Santos,Cruzeiro,SCHEDULED,,
-07/12/2025,00:00,38,Mirassol,Flamengo,SCHEDULED,,
-07/12/2025,00:00,38,Mineiro,Vasco da Gama,SCHEDULED,,
-07/12/2025,00:00,38,Internacional,Bragantino,SCHEDULED,,
-07/12/2025,00:00,38,Vitória,São Paulo,SCHEDULED,,
-07/12/2025,00:00,38,Recife,Grêmio,SCHEDULED,,
-07/12/2025,18:00,38,Corinthians,Juventude,TIMED,,
-07/12/2025,18:00,38,Ceará,Palmeiras,TIMED,,
+19/11/2025,22:30,37,Palmeiras,Vitória,FINISHED,0.0,0.0
+07/12/2025,19:00,38,Fluminense,Bahia,TIMED,,
+07/12/2025,19:00,38,Botafogo,Fortaleza,TIMED,,
+07/12/2025,19:00,38,Corinthians,Juventude,TIMED,,
+07/12/2025,19:00,38,Santos,Cruzeiro,TIMED,,
+07/12/2025,19:00,38,Mirassol,Flamengo,TIMED,,
+07/12/2025,19:00,38,Mineiro,Vasco da Gama,TIMED,,
+07/12/2025,19:00,38,Internacional,Bragantino,TIMED,,
+07/12/2025,19:00,38,Vitória,São Paulo,TIMED,,
+07/12/2025,19:00,38,Ceará,Palmeiras,TIMED,,
+07/12/2025,19:00,38,Recife,Grêmio,TIMED,,
