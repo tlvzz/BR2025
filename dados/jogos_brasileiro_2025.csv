@@ -339,9 +339,9 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 20/11/2025,21:00,34,Bahia,Fortaleza,FINISHED,2.0,3.0
 20/11/2025,22:30,34,Corinthians,São Paulo,FINISHED,3.0,1.0
 21/11/2025,00:30,34,Ceará,Internacional,FINISHED,1.0,2.0
-22/11/2025,22:30,35,Botafogo,Grêmio,TIMED,,
-23/11/2025,00:30,35,Flamengo,Bragantino,TIMED,,
-23/11/2025,00:30,35,Palmeiras,Fluminense,TIMED,,
+22/11/2025,22:30,35,Botafogo,Grêmio,FINISHED,3.0,2.0
+23/11/2025,00:30,35,Flamengo,Bragantino,FINISHED,2.0,0.0
+23/11/2025,00:30,35,Palmeiras,Fluminense,FINISHED,0.0,0.0
 23/11/2025,19:00,35,São Paulo,Juventude,TIMED,,
 23/11/2025,19:00,35,Bahia,Vasco da Gama,TIMED,,
 23/11/2025,21:30,35,Recife,Vitória,TIMED,,
