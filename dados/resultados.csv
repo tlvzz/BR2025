@@ -346,5 +346,7 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 23/11/2025,23:30,35,Cruzeiro,Corinthians,FINISHED,3.0,0.0
 24/11/2025,22:00,35,Mirassol,Ceará,FINISHED,3.0,0.0
 25/11/2025,00:00,35,Internacional,Santos,FINISHED,1.0,1.0
+26/11/2025,00:30,36,Atlético-MG,Flamengo,FINISHED,1.0,1.0
+26/11/2025,00:30,36,Grêmio,Palmeiras,FINISHED,3.0,2.0
 16/11/2025,22:00,37,R B Bragantino,Atlético-MG,FINISHED,2.0,0.0
 19/11/2025,22:30,37,Palmeiras,Vitória,FINISHED,0.0,0.0
