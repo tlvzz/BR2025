@@ -351,13 +351,13 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 30/11/2025,21:30,35,Fortaleza,Mineiro,TIMED,,
 26/11/2025,00:30,36,Mineiro,Flamengo,FINISHED,1.0,1.0
 26/11/2025,00:30,36,Grêmio,Palmeiras,FINISHED,3.0,2.0
-26/11/2025,22:00,36,Bragantino,Fortaleza,TIMED,,
+26/11/2025,22:00,36,Bragantino,Fortaleza,FINISHED,0.0,1.0
 27/11/2025,23:30,36,Fluminense,São Paulo,TIMED,,
 28/11/2025,22:00,36,Juventude,Bahia,TIMED,,
 28/11/2025,22:30,36,Vasco da Gama,Internacional,TIMED,,
 29/11/2025,00:30,36,Santos,Recife,TIMED,,
 29/11/2025,19:00,36,Vitória,Mirassol,TIMED,,
-29/11/2025,23:30,36,Ceará,Cruzeiro,TIMED,,
+30/11/2025,00:00,36,Ceará,Cruzeiro,TIMED,,
 30/11/2025,19:00,36,Corinthians,Botafogo,TIMED,,
 02/12/2025,22:00,37,Vasco da Gama,Mirassol,TIMED,,
 03/12/2025,00:30,37,Grêmio,Fluminense,TIMED,,
