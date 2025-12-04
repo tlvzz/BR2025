@@ -329,8 +329,8 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 09/11/2025,21:30,33,Flamengo,Santos,FINISHED,3.0,2.0
 09/11/2025,23:30,33,Mirassol,Palmeiras,FINISHED,2.0,1.0
 09/11/2025,23:30,33,Fortaleza,Grêmio,FINISHED,2.0,2.0
-03/12/2025,22:00,34,Bragantino,Vitória,TIMED,,
-04/12/2025,00:30,34,Mineiro,Palmeiras,TIMED,,
+03/12/2025,22:00,34,Bragantino,Vitória,FINISHED,4.0,0.0
+04/12/2025,00:30,34,Mineiro,Palmeiras,FINISHED,0.0,2.0
 18/11/2025,23:30,34,Botafogo,Recife,FINISHED,3.0,2.0
 20/11/2025,00:30,34,Fluminense,Flamengo,FINISHED,2.0,1.0
 20/11/2025,00:30,34,Santos,Mirassol,FINISHED,1.0,1.0
@@ -361,11 +361,11 @@ data,hora,rodada,time_casa,time_visitante,status,gols_casa,gols_visitante
 30/11/2025,19:00,36,Corinthians,Botafogo,FINISHED,2.0,2.0
 02/12/2025,22:00,37,Vasco da Gama,Mirassol,FINISHED,0.0,2.0
 03/12/2025,00:30,37,Grêmio,Fluminense,FINISHED,1.0,2.0
-03/12/2025,22:00,37,Fortaleza,Corinthians,TIMED,,
-03/12/2025,22:30,37,Juventude,Santos,TIMED,,
-03/12/2025,23:00,37,São Paulo,Internacional,TIMED,,
-03/12/2025,23:00,37,Bahia,Recife,TIMED,,
-04/12/2025,00:30,37,Flamengo,Ceará,TIMED,,
+03/12/2025,22:00,37,Fortaleza,Corinthians,FINISHED,2.0,1.0
+03/12/2025,22:30,37,Juventude,Santos,FINISHED,0.0,3.0
+03/12/2025,23:00,37,São Paulo,Internacional,FINISHED,3.0,0.0
+03/12/2025,23:00,37,Bahia,Recife,FINISHED,2.0,0.0
+04/12/2025,00:30,37,Flamengo,Ceará,FINISHED,1.0,0.0
 04/12/2025,22:30,37,Cruzeiro,Botafogo,TIMED,,
 16/11/2025,22:00,37,Bragantino,Mineiro,FINISHED,2.0,0.0
 19/11/2025,22:30,37,Palmeiras,Vitória,FINISHED,0.0,0.0
